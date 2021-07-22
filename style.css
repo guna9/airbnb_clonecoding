@@ -1,46 +1,26 @@
-body {
-    padding:0; margin:0;
-    letter-spacing: -0.5px;
-}
-h1, h2, h3, h4, h5, h6, p{vertical-align: baseline; outline: 0; padding: 0; margin: 0; border: 0;}
-button {background:none; border:0;}
-ul, li {padding:0; margin:0; list-style:none;}
-a {display:block; text-decoration:none;}
-/*reset*/
-
-
-header {position:fixed; width:100%; z-index:1;}
-header .topBar {width:100%;background:#222222;text-align:center;}
-header .topBar a {padding:20px 0; color:#A3A3A3; text-decoration:underline; font-weight:600; font-size:0.9rem}
-header .nav {width:1360px; margin:auto; top:28px; position:relative;}
-header .nav > div {}
-.nav .logo {font-weight:900; color:white;}
-.nav .leftSide {position:absolute; left:0;}
-.nav .navForm {margin:auto;}
-.nav .navForm ul {display:flex; justify-content:center;}
-.nav .navForm ul li {padding:0 16px; color:white;}
-.nav .navForm ul li span:after {content:""; display:block; width:0; border-bottom:2px solid rgba(225, 225, 225, 0.5); margin:10px auto; transition:all 0.3s;}
-.nav .navForm ul li span:hover:after {width:5px; }
-.nav .navForm ul li.active span:after {width:20px; border-bottom-color:white;}
-.nav .navForm .travelForm {}
-.nav .rightSide {position:absolute; right:0; top:0; display:flex;}
-.nav .rightSide > a {font-size:0.9rem; font-weight:bold;}
-
+@import "reset.css";
+@import "header.css";
+@import "footer.css";
 
 #container {width:100%;}
-#container section {width:1360px; margin:auto; padding:40px 0;}
-#container section > h1 {padding-bottom:30px;}
+#container section {width:1360px; margin:auto; padding-bottom:20px;}
+#container section > h1 {padding-bottom:25px; padding-top:25px; font-size:2rem;}
 
-.main {display:block; width:100% !important; background:green; text-align:center; padding-bottom:150px;}
-.main p {margin-top:350px; margin-bottom:20px; font-size:1.15rem; font-weight:bold;}
-.main a {display:inline-block; padding:23px 60px; border-radius:40px; font-size:1.2rem; font-weight:bold; background:white; margin-bottom:140px; box-shadow: 3px 3px 4px  rgba(0, 0, 0, 0.3);}
+.main {display:block; width:100% !important; background:green; text-align:center; padding-top:400px;}
+
+.main > p { font-size:1.15rem; font-weight:bold; margin-bottom:10px;}
+.main > a {display:inline-block; padding:20px 50px; border-radius:40px; font-size:1.2rem; font-weight:bold; background:white; margin-bottom:180px; box-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.2); transition:all 0.1 s;}
+.main > a:hover {box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.4); }
+.main > a span {background:linear-gradient(90deg, #6F019C 0%, #C6017E 135.12%); -webkit-background-clip:text; -webkit-text-fill-color: transparent;}
 
 .nearTravel {}
 .nearTravel ul {display:grid; grid-template-columns: repeat(4, 1fr); grid-auto-flow: row || row dense || dense;}
-.nearTravel ul li {}
+.nearTravel ul li {margin-bottom:15px;}
 .liveTravel li a {}
-.nearTravel li a img {width:64px; height:64px; background:#999;}
-.nearTravel li .nearTravelTxt {display:inline-block;}
+.nearTravel li a img {float:left; width:64px; height:64px; background:#999; border-radius:10px;}
+.nearTravel li .nearTravelTxt {float:left; display:inline-block; box-sizing: border-box; padding:9px 0 0 15px; color:black;}
+.nearTravel li .nearTravelTxt span {font-weight:bold;}
+.nearTravel li .nearTravelTxt p {}
 
 .liveTravel {}
 .liveTravel ul {display:grid; grid-template-columns: repeat(4, 1fr); }
@@ -48,18 +28,24 @@ header .nav > div {}
 .liveTravel li a {width:326px;}
 .liveTravel li a img {width:100%; height:326px; background:#999; border-radius:20px;}
 .liveTravel li a:hover img {opacity:0.7;}
-.liveTravel li a span {font-weight:600; color:black; font-size:1.1rem;}
+.liveTravel li a span {font-weight:600; color:black; font-size:1.15rem;}
 
-.naturalLife {}
-.naturalLife a {width:100%; box-sizing: border-box; padding:100px 60px; background:yellow; border-radius:20px;}
-.naturalLife a span {display:inline-block; padding:10px 10px; background:#333; color:white; border-radius:10px;}
+.naturalLife {padding-top:50px;}
+.naturalLife a {width:100%; box-sizing: border-box; padding:125px 80px; background:yellow;  border-radius:20px; color:black;}
+.naturalLife a h1 {font-size:3rem; line-height:1.1; }
+.naturalLife a p {margin-top:13px; font-size:1.15rem; margin-bottom:40px;}
+.naturalLife a span {display:inline-block; padding:12px 25px; background:#333; color:white; border-radius:8px; font-weight:bold;}
 
 .enjoyTravel {}
 .enjoyTravel ul {display:grid; grid-template-columns: repeat(3, 1fr); }
 .enjoyTravel ul li {}
-.enjoyTravel ul li a {width:440px;}
+.enjoyTravel ul li a {width:440px; color:black; letter-spacing: -1px; }
 .enjoyTravel ul li a img {width:100%; height:440px; background:#999; border-radius:20px;}
+.enjoyTravel ul li a span {font-weight:500; font-size:1.2rem;}
+.enjoyTravel ul li a p {font-size:0.9rem;}
 
-.startHosting {}
-.startHosting a {width:100%; box-sizing: border-box; padding:100px 60px; background:black; color:white; border-radius:20px;}
-.startHosting a span {display:inline-block; padding:10px 10px; background:white; color:black; border-radius:10px;}
+.startHosting {padding-top:50px;}
+.startHosting a {width:100%; box-sizing: border-box; padding:140px 80px; background:black; color:white; border-radius:20px;}
+.startHosting a h1 {font-size:3rem; line-height:1.1; }
+.startHosting a p {margin-top:13px; font-size:1.15rem; margin-bottom:40px; width:350px;}
+.startHosting a span {display:inline-block; padding:12px 25px; background:white; color:black; border-radius:8px; font-weight:bold;}

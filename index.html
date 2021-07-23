@@ -24,7 +24,7 @@
                     <li><span>온라인 체험</span></li>
                 </ul>
                 <div class="formBox">
-                    <div class="destinationForm">
+                    <div class="destinationForm formBtn">
                         <form>
                             <label for="destination">위치</label>
                             <input type="text" id="destination" name="destination" placeholder="어디로 여행가세요?"/>
@@ -36,12 +36,12 @@
                             </a>
                         </div>
                     </div>
-                    <div class="checkInForm">
-                        <form>
-                            <label for="checkIn">체크인</label>
-                            <input type="text" id="checkIn" name="checkIn" placeholder="날짜 입력"/>
-                        </form>
-                        <div class="checkInOutBox modal" style="display:none;">
+                    <div class="checkInBtn formBtn active">
+                        <div class="txtBox">
+                            <h3>체크인</h3>
+                            <span>날짜 입력</span>
+                        </div>
+                        <div class="checkInOutBox modal">
                             <ul>
                                 <li class="active"><button>달력</button></li>
                                 <li><button>유연한 일정</button></li>
@@ -49,28 +49,50 @@
                             달력
                         </div>
                     </div>
-                    <div class="checkOutForm">
-                        <form>
-                            <label for="checkOut">체크아웃</label>
-                            <input type="text" id="checkOut" name="checkOut" placeholder="날짜 입력"/>
-                        </form>
+                    <div class="checkOutBtn formBtn ">
+                        <div class="txtBox">
+                            <h3>체크아웃</h3>
+                            <span>날짜 입력</span>
+                        </div>
                     </div>
-                    <div class="numOfPeopleForm">
-                        <form>
-                            <label for="numOfPeople">인원</label>
-                            <input type="text" id="numOfPeople" name="numOfPeople" placeholder="게스트 추가"/>
-                        </form>
-                        <div class="numOfPeopleBox modal" style="display:none;">
+                    <div class="numOfPeopleBtn formBtn">
+                        <div class="txtBox">
+                            <h3>인원</h3>
+                            <span>게스트 추가</span>
+                        </div>
+                        <div class="numOfPeopleBox modal">
                             <ul>
                                 <li>
                                     <p>
-                                        <h3>성인</h3>
+                                        <b>성인</b>
                                         <span>만 13세 이상</span>
                                     </p>
                                     <div>
-                                        <button type="button" onclick="">-</button>
-                                        <input type="text" name="" value="0" />
-                                        <button type="button" onclick="">+</button> <!--https://chobopark.tistory.com/6 참고-->
+                                        <input type="button" onclick="count('minus')" value="-" />
+                                        <div id="result">0</div>
+                                        <input type="button" onclick="count('plus')" value="+" id="minus"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>어린이</b>
+                                        <span>만 2세~12세</span>
+                                    </p>
+                                    <div>
+                                        <input type="button" onclick="count('minus')" value="-" />
+                                        <div id="result">0</div>
+                                        <input type="button" onclick="count('plus')" value="+" id="minus"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>유아</b>
+                                        <span>만 2세 미만</span>
+                                    </p>
+                                    <div>
+                                        <input type="button" onclick="count('minus')" value="-" />
+                                        <div id="result">0</div>
+                                        <input type="button" onclick="count('plus')" value="+" id="minus"/>
                                     </div>
                                 </li>
                             </ul>
@@ -86,7 +108,7 @@
                         <path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path>
                     </svg>
                 </button>
-                <button>
+                <button id="mypageBtn">
                     <div>
                         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
                             <g filll="none" fill-rule="nonezero">
@@ -100,6 +122,10 @@
                         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 100%; width: 100%; fill: currentcolor;">
                             <path d="m16 .7c-8.437 0-15.3 6.863-15.3 15.3s6.863 15.3 15.3 15.3 15.3-6.863 15.3-15.3-6.863-15.3-15.3-15.3zm0 28c-4.021 0-7.605-1.884-9.933-4.81a12.425 12.425 0 0 1 6.451-4.4 6.507 6.507 0 0 1 -3.018-5.49c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5a6.513 6.513 0 0 1 -3.019 5.491 12.42 12.42 0 0 1 6.452 4.4c-2.328 2.925-5.912 4.809-9.933 4.809z"></path>
                         </svg>
+                    </div>
+                    <div id="mypageModal">
+                        <ul><li><a href="" style="color:#222; font-weight:900;">회원가입</a></li><li><a href="">로그인</a></li></ul>
+                        <ul><li><a href="">숙소 호스트 되기</a></li><li><a href="">체험 호스트하기</a></li><li><a href="">도움말</a></li></ul>
                     </div>
                 </button>
             </div>
@@ -115,7 +141,7 @@
             <ul>
                 <li>
                     <a href="">
-                        <img src="" alt="" />
+                        <img src="./img/near_seoul.webp" alt="" />
                         <div class="nearTravelTxt">
                             <span>서울</span>
                             <p>차로 30분 거리</p>
@@ -124,7 +150,7 @@
                 </li>
                 <li>
                     <a href="">
-                        <img src="" alt="" />
+                        <img src="./img/near_busan.webp" alt="" />
                         <div class="nearTravelTxt">
                             <span>부산</span>
                             <p>차로 5.5시간 거리</p>
@@ -133,7 +159,7 @@
                 </li>
                 <li>
                     <a href="">
-                        <img src="" alt="" />
+                        <img src="./img/near_yangyang.webp" alt="" />
                         <div class="nearTravelTxt">
                             <span>양양군</span>
                             <p>차로 2.5시간 거리</p>
@@ -142,7 +168,7 @@
                 </li>
                 <li>
                     <a href="">
-                        <img src="" alt="" />
+                        <img src="./img/near_sokcho.webp" alt="" />
                         <div class="nearTravelTxt">
                             <span>속초시</span>
                             <p>차로 3시간 거리</p>
@@ -151,7 +177,7 @@
                 </li>
                 <li>
                     <a href="">
-                        <img src="" alt="" />
+                        <img src="./img/near_jeju.webp" alt="" />
                         <div class="nearTravelTxt">
                             <span>제주도(Jeju)</span>
                             <p>차로 7.5시간 거리</p>
@@ -160,7 +186,7 @@
                 </li>
                 <li>
                     <a href="">
-                        <img src="" alt="" />
+                        <img src="./img/near_gosung.webp" alt="" />
                         <div class="nearTravelTxt">
                             <span>고성군</span>
                             <p>차로 3시간 거리</p>
@@ -169,7 +195,7 @@
                 </li>
                 <li>
                     <a href="">
-                        <img src="" alt="" />
+                        <img src="./img/near_wanju.webp" alt="" />
                         <div class="nearTravelTxt">
                             <span>완주군</span>
                             <p>차로 3시간 거리</p>
@@ -178,7 +204,7 @@
                 </li>
                 <li>
                     <a href="">
-                        <img src="" alt="" />
+                        <img src="./img/near_daegu.webp" alt="" />
                         <div class="nearTravelTxt">
                             <span>대구</span>
                             <p>차로 4시간 거리</p>
@@ -192,25 +218,25 @@
             <ul>
                 <li>
                     <a href="">
-                        <img src="" alt="" />
+                        <img src="./img/live_nature.webp" alt="" />
                         <span>자연생활을 만끽할 수 있는 숙소</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="" alt="" />
+                        <img src="./img/live_unique.webp" alt="" />
                         <span>독특한 공간</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="" alt="" />
+                        <img src="./img/live_whole.webp" alt="" />
                         <span>집 전체</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="" alt="" />
+                        <img src="./img/live_animal.webp" alt="" />
                         <span>반려동물 동반 가능</span>
                     </a>
                 </li>
@@ -228,21 +254,21 @@
             <ul>
                 <li>
                     <a href="">
-                        <div><img src="" alt="" /></div>
+                        <div><img src="./img/enjoy_experience.webp" alt="" /></div>
                         <span>체험</span>
                         <p>가까운 곳에서 즐길 수 있는 잊지 못할 체험을 찾아보세요.</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <div><img src="" alt="" /></div>
+                        <div><img src="./img/enjoy_online.webp" alt="" /></div>
                         <span>온라인 체험</span>
                         <p>호스트와 실시간으로 소통하면서 액티비티를 즐겨보세요.</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <div><img src="" alt="" /></div>
+                        <div><img src="./img/enjoy_recommend.webp" alt="" /></div>
                         <span>추천 컬렉션: 여행 본능을 깨우는 체험</span>
                         <p>온라인 체험으로 집에서 랜선 여행을 즐기세요.</p>
                     </a>

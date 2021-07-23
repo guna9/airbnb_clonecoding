@@ -6,7 +6,7 @@
 #container section {width:1360px; margin:auto; padding-bottom:20px;}
 #container section > h1 {padding-bottom:25px; padding-top:25px; font-size:2rem;}
 
-.main {display:block; width:100% !important; background:green; text-align:center; padding-top:400px;}
+.main {display:block; width:100% !important; background:url(./img/main.jpg)no-repeat center bottom; background-size:cover; text-align:center; padding-top:400px;}
 
 .main > p { font-size:1.15rem; font-weight:bold; margin-bottom:10px;}
 .main > a {display:inline-block; padding:20px 50px; border-radius:40px; font-size:1.2rem; font-weight:bold; background:white; margin-bottom:180px; box-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.2); transition:all 0.1 s;}
@@ -31,7 +31,7 @@
 .liveTravel li a span {font-weight:600; color:black; font-size:1.15rem;}
 
 .naturalLife {padding-top:50px;}
-.naturalLife a {width:100%; box-sizing: border-box; padding:125px 80px; background:yellow;  border-radius:20px; color:black;}
+.naturalLife a {width:100%; box-sizing: border-box; padding:125px 80px; background:url(./img/long_bn_nature.webp)no-repeat center; background-size:cover;  border-radius:20px; color:black;}
 .naturalLife a h1 {font-size:3rem; line-height:1.1; }
 .naturalLife a p {margin-top:13px; font-size:1.15rem; margin-bottom:40px;}
 .naturalLife a span {display:inline-block; padding:12px 25px; background:#333; color:white; border-radius:8px; font-weight:bold;}
@@ -45,7 +45,7 @@
 .enjoyTravel ul li a p {font-size:0.9rem;}
 
 .startHosting {padding-top:50px;}
-.startHosting a {width:100%; box-sizing: border-box; padding:140px 80px; background:black; color:white; border-radius:20px;}
+.startHosting a {width:100%; box-sizing: border-box; padding:140px 80px; background:url(./img/long_bn_starthosting.webp)no-repeat center; background-size:cover; color:white; border-radius:20px;}
 .startHosting a h1 {font-size:3rem; line-height:1.1; }
 .startHosting a p {margin-top:13px; font-size:1.15rem; margin-bottom:40px; width:350px;}
 .startHosting a span {display:inline-block; padding:12px 25px; background:white; color:black; border-radius:8px; font-weight:bold;}

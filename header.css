@@ -15,18 +15,18 @@
 .nav .navForm > ul li.active span:after {width:20px; border-bottom-color:white;}
 
 .nav .navForm .formBox {position:relative; display:flex; width:845px; height:65px; margin:6px auto; border-radius:35px; justify-content:space-between; cursor:pointer; background:white; box-shadow:2px 2px 20px rgba(0, 0, 0, 0.5); }
-.nav .navForm .formBox > div {width:20%; box-sizing: border-box; padding:8px 10px 10px 30px; border-radius:35px;}
+.nav .navForm .formBox.active {background:#f2f2f2f2;}
+.nav .navForm .formBox > div {width:22%; box-sizing: border-box; padding:8px 10px 10px 30px; border-radius:35px;}
 .nav .navForm .formBox > div:hover {background:#e9e9e9;}
 .nav .navForm .formBox > div:hover input {background:#e9e9e9;}
-.nav .navForm .formBox > div:first-child {width:35%; }
+.nav .navForm .formBox > div:first-child {width:31%; }
 .nav .navForm .formBox > div:last-of-type {border-right:0; width:25%;}
 .nav .navForm .formBox > div.active {background:white; box-shadow:1px 0px 10px rgba(0, 0, 0, 0.1);}
-.nav .navForm .formBox > div.active:hover,
-.nav .navForm .formBox > div.active:hover input {background:white;}
-.nav .navForm .formBox .destinationForm form {}
+.nav .navForm .formBox > div.active:hover {background:white;}
+.nav .navForm .formBox .destinationForm form {margin-top:3px;}
 .nav .navForm .formBox > div .txtBox {}
 .nav .navForm .formBox .destinationForm form label {font-size:13px; font-weight:bold;}
-.nav .navForm .formBox .destinationForm form input {border:none; width:95%;}
+.nav .navForm .formBox .destinationForm form input {border:none; width:95%; background:none;}
 .nav .navForm .formBox > div .txtBox h3 {font-size:13px; font-weight:bold; margin-top:4px;}
 .nav .navForm .formBox > div .txtBox span {font-size:0.85rem; color:#888;}
 .nav .navForm .formBox .destinationForm form input:focus {outline:none;}
@@ -46,6 +46,7 @@
 .nav .rightSide button div svg {color:#555;}
 
 .nav .rightSide button #mypageModal {display:none; position:absolute; right:0; top:50px; width:240px; height:auto; border-radius:15px; background:white; box-shadow:0px 1px 10px rgba(0, 0, 0, 0.1);}
+.nav .rightSide button #mypageModal.active{display:block;}
 .nav .rightSide button #mypageModal ul {padding:10px 0;}
 .nav .rightSide button #mypageModal ul:first-child {border-bottom:1px solid #e9e9e9; padding-top:15px;}
 .nav .rightSide button #mypageModal ul:last-child {padding-bottom:15px;}
@@ -61,13 +62,14 @@
 #header.scroll > .nav .navForm > ul li {color:black;}
 #header.scroll > .nav .navForm ul li span:after {border-bottom:3px solid rgba(0, 0, 0, 0.4);}
 #header.scroll > .nav .navForm > ul li.active span:after {border-bottom-color:black;}
-#header.scroll > .nav .navForm .formBox {border:1px solid #e9e9e9; box-shadow:none;}
+#header.scroll > .nav .navForm .formBox {border:1px solid rgb(221, 221, 221); box-shadow:none; }
+#header.scroll > .nav .navForm .formBox.active {background:#f2f2f2f2;}
 
 #header.scroll.searchBtn {padding-bottom:15px; box-shadow:rgb(0 0 0 / 8%) 0px 1px 12px;}
 #header.scroll.searchBtn .nav {top:8px;}
 #header.scroll.searchBtn .nav .navForm {}
 #header.scroll.searchBtn .nav .navForm ul {display:none;}
-#header.scroll.searchBtn .nav .navForm .formBox {width:300px; height:45px; box-shadow:rgb(0 0 0 / 8%) 0px 1px 12px;}
+#header.scroll.searchBtn .nav .navForm .formBox {width:300px; height:45px; box-shadow:rgb(0 0 0 / 8%) 0px 1px 12px; background:white;}
 #header.scroll.searchBtn .nav .navForm .formBox > div {display:none;}
 #header.scroll.searchBtn .nav .navForm .formBox button {top:6px; right:8px; width:32px; height:32px; font-size:0.6rem;}
 
@@ -80,33 +82,39 @@
 
 
 /*formBox 모달*/
-.formBox > div .modal {display:none; position:absolute; top:80px; background:white; padding:35px 30px 30px 30px; border-radius:30px; font-size:0.8rem; font-weight:bold; box-shadow:2px 2px 18px rgb(0 0 0 / 20%); }
-.formBox > div.active .modal {display:block;}
+.formBox > .formBtn .modal {display:none; position:absolute; top:80px; background:white; padding:35px 30px 30px 30px; border-radius:30px; font-size:0.8rem; font-weight:bold; box-shadow:2px 2px 18px rgb(0 0 0 / 20%); }
+.formBox > .formBtn.active .modal {display:block;}
 .formBox .destinationForm .modal {left:0;}
-.formBox .checkInBtn .modal {width:100%; left:0; box-sizing:border-box; }
+.formBox .checkInBtn .modal {width:100%; left:0; box-sizing:border-box;}
 
-.formBox .checkInBtn .checkInOutBox {display:flex !important; flex-direction:column; align-items:center;}
+.formBox .checkInBtn .checkInOutBox {}
 .formBox .checkInBtn .checkInOutBox > ul {display:inline-block; background:#e9e9e9; padding:5px 5px; border-radius:30px;}
 .formBox .checkInBtn .checkInOutBox > ul li {float:left; margin:0 3px; }
 .formBox .checkInBtn .checkInOutBox > ul li button {padding:5px 10px; font-weight:bold; border-radius:15px; cursor:pointer;}
+.formBox .checkInBtn .checkInOutBox > ul  li button:hover,
 .formBox .checkInBtn .checkInOutBox > ul  li button.active {background:white;}
 /*calendar*/
-.calendar {width:100%; margin:20px 0;}
+.calendar {width:100%; margin:30px 0;}
 .calendar .calendarHeader {position:relative;}
 .calendar .year-month, 
-.calendar .next-year-month {text-align:center; font-size:1rem !important; font-weight:normal; width:49%; display:inline-block; font-family:'roboto';}
+.calendar .next-year-month {box-sizing:border-box; text-align:center; font-size:1rem !important; font-weight:normal; width:49%; display:inline-block; font-family:'roboto';}
+.calendar .year-month {padding-left:30px;}
+.calendar .next-year-month {padding-right:30px;}
 .calendar .nav {}
-.calendar .nav-btn {position:absolute; width:25px; height:30px; border:none; font-size:16px; line-height: 34px; cursor:pointer;}
+.calendar .nav-btn {position:absolute; width:25px; height:25px; border:none; border-radius:50%; font-size:16px; cursor:pointer;}
+.calendar .nav-btn:hover {background:#cfcfcf;}
 .calendar .nav .go-prev {left:0;}
 .calendar .nav .go-next {right:0;}
-.calendar .calendarMain {display:flex; width:50%;}
-.calendar .calendarMain > div {display:inline-block; margin:0 10px; width:100%; }
+.calendar .calendarMain {display:flex; width:48%;}
+.calendar .calendarMain > div {display:inline-block; }
+.calendar .calendarMain .thisMonth {margin-left:30px;}
+.calendar .calendarMain .nextMonth {margin-right:30px;}
 .calendar .calendarMain .days {display: flex; margin: 25px 0 10px 0;}
 .calendar .calendarMain .day {width: calc(100% / 7); text-align: center; color:#888;}
 .calendar .calendarMain .dates {display: flex; flex-flow: row wrap; }
-.calendar .calendarMain .date {width: calc(100% / 7); text-align:center; padding:7px 0;}
+.calendar .calendarMain .date {width: calc(100% / 7); text-align:center; padding:7px 0; font-weight:normal; }
 .calendar .calendarMain .date .before {opacity: .3;}
-.calendar .calendarMain .date .other {opacity: .3;}
+.calendar .calendarMain .date .other {font-size:0;}
 .calendar .calendarMain .date .today {position:relative; color:white; background:black; border-radius:50%; padding:5px 6px;}
 /*.calendar .calendarMain .day:nth-child(7n + 1),
 .calendar .calendarMain .date:nth-child(7n + 1) {color:red;}

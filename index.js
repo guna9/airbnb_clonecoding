@@ -15,6 +15,7 @@ function scrollFunc(){
         formSearchBox.addEventListener("click", seachBtnClick); 
         if(navFormBtn.className !== "active"){
             navFormBtn.classList.remove('active');
+            //navFormBtn.parentElement.classList.remove("active");
         }
     }else{
         header.classList.remove("scroll", "searchBtn");
@@ -24,16 +25,29 @@ function scrollFunc(){
 document.addEventListener('scroll', scrollFunc);
 //스크롤
 
-/*function navClick(){
-    navFormBtn.classList.add("active");
-    if(navFormBtn.className !== "active"){
-        console.log("active~");
-        
+const formBtn = document.querySelectorAll('.formBtn');
+const formBox = document.querySelector('.formBox');
+const popups = document.querySelectorAll('.popup');
+
+const mypageBtn = document.getElementById('mypageBtn');
+const mapageModal = mypageBtn.querySelector("#mypageModal");
+
+formBtn.forEach(
+    function(button,index){
+        let newIndex  = index;
+        button.addEventListener('click', () => {
+            formBtn[newIndex].classList.add("active"); 
+            formBox.classList.add('active');
+        });
+        //다른 버튼을 클릭하면 해당모달 active 클래스 지움
     }
-    navFormBtnaddEventListener('click', navClick);
+);
+
+function handleClick(){
+	mapageModal.classList.toggle('active');
 }
-// navFormBtn 클릭시 모달창 //작성중
-*/
+mypageBtn.addEventListener("click", handleClick);
+
 
 
 function count(type) {

@@ -29,6 +29,7 @@
                             <label for="destination">위치</label>
                             <input type="text" id="destination" name="destination" placeholder="어디로 여행가세요?"/>
                         </form>
+                        <i></i>
                         <div class="destinationBox modal">
                             <span>언제 어디로든 떠나는 여행</span>
                             <a href="">
@@ -36,7 +37,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="checkInBtn formBtn active">
+                    <div class="checkInBtn formBtn">
                         <div class="txtBox">
                             <h3>체크인</h3>
                             <span>날짜 입력</span>
@@ -49,8 +50,16 @@
                             <div class="calendar">
                                 <div class="calendarHeader">
                                     <div class="nav">
-                                        <button class="nav-btn go-prev" onclick="prevMonth()" >&lt;</button>
-                                        <button class="nav-btn go-next" onclick="nextMonth()" >&gt;</button>
+                                        <button class="nav-btn go-prev" onclick="prevMonth()" aria-label="이전" >
+                                            <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                                                <path d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                        <button class="nav-btn go-next" onclick="nextMonth()" aria-label="다음">
+                                            <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                                                <path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
                                     </div>
                                     <div class="year-month"></div>
                                     <div class="next-year-month"></div>
@@ -121,7 +130,11 @@
                             </ul>
                         </div>
                     </div>
-                    <button class="searchBtn">검색</button>
+                    <button class="searchBtn">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block;fill: none;height: 16px;width: 16px;stroke: currentcolor;stroke-width: 4; overflow: visible; margin:auto;">
+                            <path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
             <div class="rightSide">

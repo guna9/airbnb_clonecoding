@@ -1,3 +1,4 @@
+
 const header = document.getElementById("header");
 const formSearchBox = header.querySelector(".formBox");
 

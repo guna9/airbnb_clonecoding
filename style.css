@@ -3,49 +3,75 @@
 @import "footer.css";
 
 #container {width:100%;}
-#container section {width:1360px; margin:auto; padding-bottom:20px;}
+#container section {width:100%; margin:auto; padding-left:80px; padding-right:80px; box-sizing:border-box;}
 #container section > h1 {padding-bottom:25px; padding-top:25px; font-size:2rem;}
 
-.main {display:block; width:100% !important; background:url(./img/main.jpg)no-repeat center bottom; background-size:cover; text-align:center; padding-top:400px;}
+.main {display:block; width:100% !important; background:url(./img/main.jpg)no-repeat center bottom; background-size:cover; text-align:center; padding-top:370px; padding-bottom:20px;}
 
 .main > p { font-size:1.15rem; font-weight:bold; margin-bottom:10px;}
 .main > a {display:inline-block; padding:20px 50px; border-radius:40px; font-size:1.2rem; font-weight:bold; background:white; margin-bottom:180px; box-shadow: 1px 1px 15px rgb(0 0 0 / 20%); transition:all 0.3s;}
 .main > a:hover {box-shadow: 2px 2px 15px  rgba(0, 0, 0, 0.3); }
 .main > a span {background:linear-gradient(90deg, #6F019C 0%, #C6017E 135.12%); -webkit-background-clip:text; -webkit-text-fill-color: transparent;}
 
-.nearTravel {}
-.nearTravel ul {display:grid; grid-template-columns: repeat(4, 1fr); grid-auto-flow: row || row dense || dense;}
-.nearTravel ul li {margin-bottom:15px;}
-.liveTravel li a {}
-.nearTravel li a img {float:left; width:64px; height:64px; background:#999; border-radius:10px;}
-.nearTravel li .nearTravelTxt {float:left; display:inline-block; box-sizing: border-box; padding:9px 0 0 15px; color:black;}
+.nearTravel {padding-bottom:20px;}
+.nearTravel ul {display:flex; flex-direction:row; flex-wrap:wrap;}
+.nearTravel ul li {width:25%; margin-bottom:15px;}
+.nearTravel li a img {float:left; width:64px; height:64px; background:#999; border-radius:8px;}
+.nearTravel li .nearTravelTxt {display:inline-block; box-sizing: border-box; padding:9px 0 0 15px; color:black;}
 .nearTravel li .nearTravelTxt span {font-weight:bold;}
-.nearTravel li .nearTravelTxt p {}
 
-.liveTravel {}
-.liveTravel ul {display:grid; grid-template-columns: repeat(4, 1fr); }
-.liveTravel ul li {}
-.liveTravel li a {width:326px;}
-.liveTravel li a img {width:100%; height:326px; background:#999; border-radius:20px;}
+.liveTravel {padding-bottom:70px; position:relative;}
+.liveTravel .wrap {width:100%; overflow:hidden; }
+.liveTravel ul {display:flex; justify-content:space-between;}
+.liveTravel ul li {width:24%;}
+.liveTravel li a {width:100%;}
+.liveTravel li a img {width:100%; background:#999; border-radius:8px;}
 .liveTravel li a:hover img {opacity:0.7;}
 .liveTravel li a span {font-weight:600; color:black; font-size:1.15rem;}
+.liveTravel button {display:none; position:absolute; top:50%; background:white; width:30px; height:30px; border-radius:50%; box-shadow:1px 1px 10px rgb(0, 0, 0, 0.5);}
+.liveTravel button.prevBtn {left:30px;}
+.liveTravel button.nextBtn {right:30px;}
 
-.naturalLife {padding-top:50px;}
-.naturalLife a {width:100%; box-sizing: border-box; padding:125px 80px; background:url(./img/long_bn_nature.webp)no-repeat center; background-size:cover;  border-radius:20px; color:black;}
+.naturalLife {padding-bottom:40px;}
+.naturalLife a {width:100%; box-sizing: border-box; padding:125px 80px; background:url(./img/long_bn_nature.webp)no-repeat center; background-size:cover;  border-radius:16px; color:black;}
 .naturalLife a h1 {font-size:3rem; line-height:1.1; }
 .naturalLife a p {margin-top:13px; font-size:1.15rem; margin-bottom:40px;}
 .naturalLife a span {display:inline-block; padding:12px 25px; background:#333; color:white; border-radius:8px; font-weight:bold;}
 
-.enjoyTravel {}
-.enjoyTravel ul {display:grid; grid-template-columns: repeat(3, 1fr); }
-.enjoyTravel ul li {}
-.enjoyTravel ul li a {width:440px; color:black; letter-spacing: -1px; }
-.enjoyTravel ul li a img {width:100%; height:440px; background:#999; border-radius:20px;}
+.enjoyTravel {padding-bottom:70px;}
+.enjoyTravel ul {display:flex; justify-content:space-between; }
+.enjoyTravel ul li {width:32.5%; }
+.enjoyTravel ul li a {width:100%; color:black; letter-spacing: -1px; }
+.enjoyTravel ul li a img {width:100%; background:#999; border-radius:8px;}
 .enjoyTravel ul li a span {font-weight:500; font-size:1.2rem;}
 .enjoyTravel ul li a p {font-size:0.9rem;}
 
-.startHosting {padding-top:50px;}
-.startHosting a {width:100%; box-sizing: border-box; padding:140px 80px; background:url(./img/long_bn_starthosting.webp)no-repeat center; background-size:cover; color:white; border-radius:20px;}
+.startHosting {padding-bottom:60px;}
+.startHosting a {width:100%; box-sizing: border-box; padding:140px 80px; background:url(./img/long_bn_starthosting.webp)no-repeat center; background-size:cover; color:white; border-radius:16px;}
 .startHosting a h1 {font-size:3rem; line-height:1.1; }
 .startHosting a p {margin-top:13px; font-size:1.15rem; margin-bottom:40px; width:350px;}
 .startHosting a span {display:inline-block; padding:12px 25px; background:white; color:black; border-radius:8px; font-weight:bold;}
+
+
+@media screen and (max-width:1128px) {
+    #container section {padding-left:40px; padding-right:40px;}
+    .nearTravel > ul > li {width:33%;}
+    .nearTravel > ul > li:nth-child(7),
+    .nearTravel > ul > li:nth-child(8) {display:none;}
+    .nearTravel li a img {width:72px; height:72px;}
+
+    .liveTravel ul {width:134%;}
+    .liveTravel button {display:block;}
+
+    .naturalLife a {padding:123px 40px; background-size:113%;}
+    .startHosting a {padding:110px 40px; background-size:113%;}
+    .naturalLife a h1,
+    .startHosting a h1 {font-size:1.9rem;}
+    .naturalLife a p,
+    .startHosting a p {font-size:1rem; margin-top:11px; margin-bottom:21px; width:240px;}
+    .naturalLife a span,
+    .startHosting a span {font-size:0.9rem; padding:7px 14px;}
+
+    
+
+}

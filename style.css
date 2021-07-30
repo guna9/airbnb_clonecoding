@@ -28,9 +28,9 @@
 .liveTravel li a img {width:100%; background:#999; border-radius:8px;}
 .liveTravel li a:hover img {opacity:0.7;}
 .liveTravel li a span {font-weight:600; color:black; font-size:1.15rem;}
-.liveTravel button {display:none; position:absolute; top:50%; background:white; width:30px; height:30px; border-radius:50%; box-shadow:1px 1px 10px rgb(0, 0, 0, 0.5);}
-.liveTravel button.prevBtn {left:30px;}
-.liveTravel button.nextBtn {right:30px;}
+.liveTravel button {display:none; position:absolute; top:50%; background:white; width:30px; height:30px; border-radius:50%; box-shadow:1px 1px 10px rgb(0, 0, 0, 0.3); line-height:30px;}
+.liveTravel button.prevBtn {left:25px;}
+.liveTravel button.nextBtn {right:25px;}
 
 .naturalLife {padding-bottom:40px;}
 .naturalLife a {width:100%; box-sizing: border-box; padding:125px 80px; background:url(./img/long_bn_nature.webp)no-repeat center; background-size:cover;  border-radius:16px; color:black;}

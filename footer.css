@@ -1,21 +1,21 @@
 footer {background-color:#f7f7f7; border-top:1px solid #cfcfcf;}
-footer .map,
-footer .footNav {width:100%; box-sizing: border-box;  }
-footer .map {display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; padding:50px 80px;}
+footer .map {width:100%; box-sizing: border-box; display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; padding:50px 80px;}
 footer .map ul {display:flex; flex-direction:column; font-size:0.9rem; line-height:2.2rem;}
 footer .map ul h4 {font-size:0.8rem;}
 footer .map ul li {}
 footer .map li a {color:#444;}
 
-footer .footNav {display:flex; justify-content:space-between; border-top:1px solid #cfcfcf; padding:25px 80px;}
+footer .footNav {display:inline-block; width:100%; box-sizing: border-box; border-top:1px solid #cfcfcf; padding:25px 80px;}
 footer .footNav ul li {margin-right:15px;}
-footer .footNav ul li a {color:black;}
-footer .footNav .leftSide {display:flex; font-size:0.9rem;}
-footer .footNav .rightSide {display:flex;}
+footer .footNav ul li a {color:black; }
+footer .footNav .leftSide {float:left; display:flex; font-size:0.9rem;}
+footer .footNav .leftSide li {text-align:center;}
+footer .footNav .rightSide {float:right; display:flex;}
+footer .footNav .rightSide a span {border-bottom:1px solid black; font-size:0.9rem; line-height:1rem; font-weight:bold;}
 footer .footNav .rightSide .nation {display:flex;}
 footer .footNav .rightSide .sns {display:flex; margin-left:40px;}
 footer .footNav .rightSide .sns li {margin-right:0; margin-left:10px;}
-footer .footNav .rightSide .sns a {width:22px; height:22px; border-radius:5px; background:black; color:white; text-align:center; line-height:22px; font-weight:100;}
+footer .footNav .rightSide .sns a {width:22px; height:22px; border-radius:5px; color:black;  line-height:22px; font-weight:100;}
 
 
 @media screen and (max-width:1128px) {
@@ -24,8 +24,18 @@ footer .footNav .rightSide .sns a {width:22px; height:22px; border-radius:5px; b
     footer .map ul h4 {width:100%; }
     footer .map ul li {width:33%; }
 
-    footer .footNav {border-top:none; padding-left:40px; padding-right:40px; display:block;}
+    footer .footNav {border-top:none; padding-left:40px; padding-right:40px; display:flex; flex-direction:column;}
+    footer .footNav ul li {margin-right:0;}
     footer .footNav ul,
-    footer .footNav .rightSide {float:right; padding-bottom:10px; width:100%;}
-    footer .footNav .leftSide {justify-content: center;}
+    footer .footNav .rightSide {justify-content: center; padding-bottom:9px;}
+    footer .footNav .rightSide li {margin-right:30px;}
+    footer .footNav .rightSide .sns {margin-left:20px;}
+    footer .footNav .rightSide .sns li {margin:0 10px;}
+    footer .footNav .rightSide .sns li:last-child {margin-right:0;}
+    footer .footNav .rightSide .sns svg {float:right;}
+    footer .footNav .leftSide {justify-content: center; flex-wrap: wrap;}
+    footer .footNav .leftSide li:first-child {width:100%; margin-bottom:3px;}
+    footer .footNav .leftSide li a {margin:0 10px;}
+    
+    
 }

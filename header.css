@@ -18,10 +18,10 @@
 
 .nav .navForm .formBox {position:relative; display:flex; max-width:850px; height:65px; margin:6px auto; border-radius:35px; justify-content:space-between; cursor:pointer; background:white; box-shadow:2px 2px 20px rgba(0, 0, 0, 0.5); }
 .nav .navForm .formBox.active {background:#f2f2f2f2;}
-.nav .navForm .formBox > div {width:22%; box-sizing: border-box; padding:8px 10px 10px 30px; border-radius:35px;}
+.nav .navForm .formBox > div {width:23%; box-sizing: border-box; padding:8px 10px 10px 30px; border-radius:35px;}
 .nav .navForm .formBox > div:hover {background:#e9e9e9;}
 .nav .navForm .formBox > div:hover input {background:#e9e9e9;}
-.nav .navForm .formBox > div:first-child {width:31%; }
+.nav .navForm .formBox > div:first-child {width:32%; }
 .nav .navForm .formBox > div:last-of-type {border-right:0; width:25%;}
 .nav .navForm .formBox > div.active {background:white; box-shadow:1px 0px 10px rgba(0, 0, 0, 0.1);}
 .nav .navForm .formBox > div.active:hover {background:white;}
@@ -153,6 +153,8 @@
 }
 .formBox .destinationBox a:hover {box-shadow:3px 3px 20px rgba(0, 0, 0, 0.3);}
 
+
+#modalActiveBg {display:none; position:fixed; width:100%; height:100vh; background:rgb(0 0 0 / 30%); z-index:1;}
 
 
 /*반응형 미디어스크린*/

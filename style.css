@@ -2,19 +2,19 @@
 @import "header.css";
 @import "footer.css";
 
-#container {width:100%;}
+#container {width:100%; overflow:hidden;}
 #container section {width:100%; margin:auto; padding-left:80px; padding-right:80px; box-sizing:border-box;}
 #container section > h1 {padding-bottom:25px; padding-top:25px; font-size:2rem;}
 
-.main {display:block; width:100% !important; background:url(./img/main.jpg)no-repeat center bottom; background-size:cover; text-align:center; padding-top:370px; padding-bottom:20px;}
+.main {display:block; width:100% !important; background:url(./img/main.jpg)no-repeat center bottom; background-size:cover; text-align:center; padding-top:380px; padding-bottom:5px;}
 
-.main > p { font-size:1.15rem; font-weight:bold; margin-bottom:10px;}
-.main > a {display:inline-block; padding:20px 50px; border-radius:40px; font-size:1.2rem; font-weight:bold; background:white; margin-bottom:180px; box-shadow: 1px 1px 15px rgb(0 0 0 / 20%); transition:all 0.3s;}
-.main > a:hover {box-shadow: 2px 2px 15px  rgba(0, 0, 0, 0.3); }
+.main > p { font-size:1.15rem; font-weight:bold; margin-bottom:15px;}
+.main > a {display:inline-block; padding:20px 55px; border-radius:40px; font-size:1.2rem; font-weight:bold; background:white; margin-bottom:180px; box-shadow: 1px 8px 15px rgb(0 0 0 / 10%); transition:all 0.3s;}
+.main > a:hover {box-shadow: 2px 8px 15px rgb(0 0 0 / 20%); }
 .main > a span {background:linear-gradient(90deg, #6F019C 0%, #C6017E 135.12%); -webkit-background-clip:text; -webkit-text-fill-color: transparent;}
 
 .nearTravel {padding-bottom:20px;}
-.nearTravel ul {display:flex; flex-direction:row; flex-wrap:wrap;}
+.nearTravel ul {display:flex; flex-direction:row; flex-wrap:wrap; justify-content: space-between;}
 .nearTravel ul li {width:25%; margin-bottom:15px;}
 .nearTravel li a img {float:left; width:64px; height:64px; background:#999; border-radius:8px;}
 .nearTravel li .nearTravelTxt {display:inline-block; box-sizing: border-box; padding:9px 0 0 15px; color:black;}
@@ -33,8 +33,8 @@
 .liveTravel button.nextBtn {right:25px;}
 
 .naturalLife {padding-bottom:40px;}
-.naturalLife a {width:100%; box-sizing: border-box; padding:125px 80px; background:url(./img/long_bn_nature.webp)no-repeat center; background-size:cover;  border-radius:16px; color:black;}
-.naturalLife a h1 {font-size:3rem; line-height:1.1; }
+.naturalLife a {width:100%; box-sizing: border-box; padding:125px 80px; background:url(./img/long_bn_nature.webp)no-repeat left center; background-size:cover;  border-radius:16px; color:black;}
+.naturalLife a h1 {display:inline-block; width:240px; font-size:3rem; line-height:1.1; }
 .naturalLife a p {margin-top:13px; font-size:1.15rem; margin-bottom:40px;}
 .naturalLife a span {display:inline-block; padding:12px 25px; background:#333; color:white; border-radius:8px; font-weight:bold;}
 
@@ -43,10 +43,10 @@
 .enjoyTravel ul li {width:32.5%; }
 .enjoyTravel ul li a {width:100%; color:black; letter-spacing: -1px; }
 .enjoyTravel ul li a img {width:100%; background:#999; border-radius:8px;}
-.enjoyTravel ul li a span {font-weight:500; font-size:1.2rem;}
+.enjoyTravel ul li a span {font-weight:600; font-size:1.2rem;}
 .enjoyTravel ul li a p {font-size:0.9rem;}
 
-.startHosting {padding-bottom:60px;}
+.startHosting {padding-bottom:65px;}
 .startHosting a {width:100%; box-sizing: border-box; padding:140px 80px; background:url(./img/long_bn_starthosting.webp)no-repeat center; background-size:cover; color:white; border-radius:16px;}
 .startHosting a h1 {font-size:3rem; line-height:1.1; }
 .startHosting a p {margin-top:13px; font-size:1.15rem; margin-bottom:40px; width:350px;}
@@ -65,7 +65,7 @@
 
     .naturalLife a {padding:123px 40px; background-size:113%;}
     .startHosting a {padding:110px 40px; background-size:113%;}
-    .naturalLife a h1,
+    .naturalLife a h1 {font-size:1.9rem; width:100%; }
     .startHosting a h1 {font-size:1.9rem;}
     .naturalLife a p,
     .startHosting a p {font-size:1rem; margin-top:11px; margin-bottom:21px; width:240px;}
@@ -74,4 +74,49 @@
 
     
 
+}
+
+
+@media screen and (max-width:1050px){
+    .main {padding-top:35vw; padding-bottom:0;}
+    .main > a {margin-bottom:15vw;}
+    
+    
+}
+
+/*full size main*/
+@media screen and (max-width:949px){
+    .main {padding-top:51vw; padding-bottom:8vw; background:url(./img/main_949.jpg)no-repeat center bottom; background-size:cover;}
+    #container section > h1 {font-size:1.65rem; padding-top:10px;}
+    .naturalLife {padding-bottom:30px;}
+    .naturalLife a {padding:120px 40px; background-size:cover;}
+    .startHosting a {background-size:cover;}
+    .liveTravel, 
+    .enjoyTravel {padding-bottom:60px;}
+    .enjoyTravel ul li {width:32%;}
+}
+
+
+/*모바일 사이즈*/
+@media screen and (max-width:743px){
+    #container section {padding-left:24px; padding-right:24px;}
+    .main {height:100vh; padding-top:69vw; background:url(./img/main_744_m.jpg)no-repeat center bottom; background-size:cover;}
+    #container section > h1 {padding-top:25px; font-size:1.4rem;}
+    
+    .nearTravel ul {width:260%;}
+    
+    .liveTravel .wrap {overflow:unset;}
+    .liveTravel ul {width:167vh;}
+    .liveTravel button {display:none;}
+
+    .naturalLife a,
+    .startHosting a {height:112vw; text-align:center; padding-top:30px;}
+    .naturalLife a {background:url(./img/long_bn_nature_m.webp)no-repeat center bottom;}
+    .naturalLife a p,
+    .startHosting a p {width:100%; }
+
+    .enjoyTravel ul {width:125vh;}
+    .enjoyTravel ul li {width:32.5%;}
+
+    .startHosting a {background-position-x:right; background-position-y:bottom; background-size:125%; background-color:#222;}
 }

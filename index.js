@@ -9,6 +9,11 @@ const navFormBtnSib = navFormBtn.nextSibling;
 function seachBtnClick(){
     header.classList.remove("searchBtn");
     modalActiveBg.classList.add("active");
+    if(header.className !== "scroll"){
+        console.log("not scroll");
+        modalActiveBg.classList.remove("active");
+    }
+    
 }
 
 function scrollFunc(){
@@ -23,7 +28,7 @@ function scrollFunc(){
     }else{
         header.classList.remove("scroll", "searchBtn");
     }
-} //-------------------20210801 modalActvieBg : header scroll일때 아닐때 순서 다시잡아야함
+}
 
 document.addEventListener('scroll', scrollFunc);
 //스크롤 --- e
@@ -42,7 +47,6 @@ formBtn.forEach(
         button.addEventListener('click', () => {
             formBtn[newIndex].classList.add("active"); 
             formBox.classList.add('active');
-            console.log("hey");
             modalActiveBg.classList.remove("active");
         });
         //다른 버튼을 클릭하면 해당모달 active 클래스 지움

@@ -141,7 +141,7 @@
 .calendar .calendarMain .date {width: calc(100% / 7); text-align:center; padding:7px 0; font-weight:normal; }
 .calendar .calendarMain .date .before {opacity: .3;}
 .calendar .calendarMain .date .other {font-size:0;}
-.calendar .calendarMain .date .today {position:relative; color:white; background:black; border-radius:50%; padding:5px 6px;}
+.calendar .calendarMain .date .today {position:relative; color:white; background:black; border-radius:50%; padding:5px 10px;}
 /*.calendar .calendarMain .day:nth-child(7n + 1),
 .calendar .calendarMain .date:nth-child(7n + 1) {color:red;}
 .calendar .calendarMain .day:nth-child(7n),

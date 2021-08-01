@@ -32,6 +32,8 @@ function scrollFunc(){
 
 document.addEventListener('scroll', scrollFunc);
 //스크롤 --- e
+//--------------------------20210802 특정 높이에서 modalActiveBg.active가 안잡힘 ;; whyrano
+
 
 //footer까지 스크롤이 내려가면 mobileFixedTab은 아래방향으로 사라짐
 //스크롤 모바일 --- e
@@ -43,11 +45,11 @@ const popups = document.querySelectorAll('.popup');
 
 formBtn.forEach(
     function(button,index){
-        let newIndex  = index;
+        let newIndex = index;
         button.addEventListener('click', () => {
-            formBtn[newIndex].classList.add("active"); 
             formBox.classList.add('active');
-            modalActiveBg.classList.remove("active");
+            formBtn[newIndex].classList.add("active");
+            
         });
         //다른 버튼을 클릭하면 해당모달 active 클래스 지움
     }
@@ -60,8 +62,17 @@ const mypageModal = document.getElementById("mypageModal");
 function handleClick(){
 	mypageModal.classList.toggle('active');
 }
+
 mypageBtn.addEventListener("click", handleClick);
 //마이페이지 모달창 오픈
+
+/*window.onclick = function(event){
+    if (event.target !== mypageModal){
+        console.log("lol");
+        mypageModal.classList.remove('active');
+    }
+}  모달창 밖을 눌렀을때 마이페이지 모달창 닫혀야 함  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal */
+
 
 
 const loginModalBtn = mypageModal.querySelectorAll(".loginListBtn");
@@ -70,6 +81,7 @@ const loginModal = document.getElementById("loginModal");
 function loginModalClick(){
     loginModal.classList.add('active');
     modalActiveBg.classList.add('active');
+    modalActiveBg.style.zIndex = "4";
     document.body.style.overflow = "hidden";
 
     const closeModalBtn = loginModal.querySelector(".closeBtn");
@@ -77,6 +89,7 @@ function loginModalClick(){
         loginModal.classList.remove("active");
         modalActiveBg.classList.remove('active');
         document.body.style.overflow = "auto";
+        modalActiveBg.style.zIndex = "3";
     }
     closeModalBtn.addEventListener("click", closeBtnClick);
     modalActiveBg.addEventListener("click", closeBtnClick);

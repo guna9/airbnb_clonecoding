@@ -179,7 +179,7 @@
 
 
 /* 회원가입/로그인 & 국가지역 모달 */
-#loginModal {position:fixed; width:37vw; max-width:568px; height:89vh; left:31.5vw; background:white; border-radius:10px; z-index:4; top:100vh; transition:all 0.2s;}
+#loginModal {position:fixed; width:37vw; max-width:568px; height:89vh; left:31.5vw; background:white; border-radius:10px; z-index:5; top:100vh; transition:all 0.2s;}
 #loginModal.active {display:block; top:5.5vh; }
 #loginModal .modalTitle {position:relative; height:10%; border-bottom:1px solid #e9e9e9; box-sizing:border-box; padding:20px 20px;}
 #loginModal .modalTitle button {position:absolute; cursor:pointer;}

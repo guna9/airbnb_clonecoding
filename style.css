@@ -13,14 +13,14 @@
 .main > a:hover {box-shadow: 2px 8px 15px rgb(0 0 0 / 20%); }
 .main > a span {background:linear-gradient(90deg, #6F019C 0%, #C6017E 135.12%); -webkit-background-clip:text; -webkit-text-fill-color: transparent;}
 
-.nearTravel {padding-bottom:20px;}
+.nearTravel {}
 .nearTravel ul {display:flex; flex-direction:row; flex-wrap:wrap; justify-content: space-between;}
 .nearTravel ul li {width:25%; margin-bottom:15px;}
 .nearTravel li a img {float:left; width:64px; height:64px; background:#999; border-radius:8px;}
 .nearTravel li .nearTravelTxt {display:inline-block; box-sizing: border-box; padding:9px 0 0 15px; color:black;}
 .nearTravel li .nearTravelTxt span {font-weight:bold;}
 
-.liveTravel {padding-bottom:70px; position:relative;}
+.liveTravel {padding-top:20px; padding-bottom:10px; position:relative;}
 .liveTravel .wrap {width:100%; overflow:hidden; }
 .liveTravel ul {display:flex; justify-content:space-between;}
 .liveTravel ul li {width:24%;}
@@ -32,13 +32,13 @@
 .liveTravel button.prevBtn {left:25px;}
 .liveTravel button.nextBtn {right:25px;}
 
-.naturalLife {padding-bottom:40px;}
+.naturalLife {padding-top:70px; padding-bottom:40px;}
 .naturalLife a {width:100%; box-sizing: border-box; padding:125px 80px; background:url(./img/long_bn_nature.webp)no-repeat left center; background-size:cover;  border-radius:16px; color:black;}
 .naturalLife a h1 {display:inline-block; width:240px; font-size:3rem; line-height:1.1; }
 .naturalLife a p {margin-top:13px; font-size:1.15rem; margin-bottom:40px;}
 .naturalLife a span {display:inline-block; padding:12px 25px; background:#333; color:white; border-radius:8px; font-weight:bold;}
 
-.enjoyTravel {padding-bottom:70px;}
+.enjoyTravel {padding-bottom:10px;}
 .enjoyTravel ul {display:flex; justify-content:space-between; }
 .enjoyTravel ul li {width:32.5%; }
 .enjoyTravel ul li a {width:100%; color:black; letter-spacing: -1px; }
@@ -46,7 +46,7 @@
 .enjoyTravel ul li a span {font-weight:600; font-size:1.2rem;}
 .enjoyTravel ul li a p {font-size:0.9rem;}
 
-.startHosting {padding-bottom:65px;}
+.startHosting {padding-top:70px; padding-bottom:65px;}
 .startHosting a {width:100%; box-sizing: border-box; padding:140px 80px; background:url(./img/long_bn_starthosting.webp)no-repeat center; background-size:cover; color:white; border-radius:16px;}
 .startHosting a h1 {font-size:3rem; line-height:1.1; }
 .startHosting a p {margin-top:13px; font-size:1.15rem; margin-bottom:40px; width:350px;}
@@ -88,11 +88,11 @@
 @media screen and (max-width:949px){
     .main {padding-top:51vw; padding-bottom:8vw; background:url(./img/main_949.jpg)no-repeat center bottom; background-size:cover;}
     #container section > h1 {font-size:1.65rem; padding-top:10px;}
+    .naturalLife, 
+    .startHosting {padding-top:60px;}
     .naturalLife {padding-bottom:30px;}
     .naturalLife a {padding:120px 40px; background-size:cover;}
     .startHosting a {background-size:cover;}
-    .liveTravel, 
-    .enjoyTravel {padding-bottom:60px;}
     .enjoyTravel ul li {width:32%;}
 }
 
@@ -100,12 +100,30 @@
 /*모바일 사이즈*/
 @media screen and (max-width:743px){
     #container section {padding-left:24px; padding-right:24px;}
-    .main {height:100vh; padding-top:69vw; background:url(./img/main_744_m.jpg)no-repeat center bottom; background-size:cover;}
+
+    .main {height:138vw; padding-top:69vw; background:url(./img/main_744_m.jpg)no-repeat center bottom; background-size:cover;}
+    .main > p {line-height:1.3rem;}
+    .main > a {padding: 13px 30px;}
     #container section > h1 {padding-top:25px; font-size:1.4rem;}
-    
+    #container section .wrap {}
+
+    #container section .wrap {overflow-x:scroll; padding-bottom:10px;}
+    /* 스크롤바 설정*/
+    #container section .wrap::-webkit-scrollbar {height: 8px;}
+
+    /* 스크롤바 막대 설정*/
+    #container section .wrap::-webkit-scrollbar-thumb {
+        height: 17%; background-color: rgba(0, 0, 0, 0.15); border-radius: 10px;  
+    }
+
+    /* 스크롤바 뒷 배경 설정*/
+    #container section .wrap::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.1); border-radius: 10px;
+    }
+
     .nearTravel ul {width:260%;}
     
-    .liveTravel .wrap {overflow:unset;}
+    .liveTravel .wrap {padding-bottom:20px !important;}
     .liveTravel ul {width:167vh;}
     .liveTravel button {display:none;}
 
@@ -118,5 +136,6 @@
     .enjoyTravel ul {width:125vh;}
     .enjoyTravel ul li {width:32.5%;}
 
-    .startHosting a {background-position-x:right; background-position-y:bottom; background-size:125%; background-color:#222;}
+    .startHosting {padding-bottom:40px;}
+    .startHosting a {background-position-x:right; background-position-y:bottom; background-size:160%; background-color:#222;}
 }

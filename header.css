@@ -68,7 +68,7 @@
 .mobileNav .mobileSearch form input[type="text" i] {width:100%; border:none; font-size:1rem; margin-top:2px;}
 
 /*모바일 하단 고정 탭*/
-#mobileFixedTab {display:none; position:fixed; width:100%; padding:12px 0 8px 0; background:white; bottom:0; border-top:1px solid #cfcfcf; z-index:1;}
+#mobileFixedTab {display:none; position:fixed; width:100%; padding:12px 0 8px 0; background:white; border-top:1px solid #cfcfcf; z-index:1;}
 #mobileFixedTab ul {display:flex; width:36%; margin:auto; justify-content: space-between;}
 #mobileFixedTab ul li {}
 #mobileFixedTab ul li a {font-size:0.7rem; color:#111; font-weight:600;}
@@ -232,7 +232,7 @@
 
 @media screen and (max-width:744px){
     .mobileNav {display:block;}
-    #mobileFixedTab {display:block;}
+    #mobileFixedTab {display:block; bottom:0; transition:all 0.2s;}
 
     #header .topBar {background:#f7f7f7; color:#222;}
     #header .topBar a {font-size: 0.78rem; color:black; padding-top:16px; padding-bottom:17px;}

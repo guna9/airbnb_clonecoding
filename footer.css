@@ -47,5 +47,23 @@ footer .footNav .rightSide .sns a {width:22px; height:22px; border-radius:5px; c
 
 
 @media screen and (max-width:743px){
-    
+    footer .map,
+    footer .footNav {padding-left:20px; padding-right:20px;}
+    footer .map ul {flex-direction: column;}
+    footer .map ul li {width:100%;}
+    footer .footNav .rightSide {justify-content:left;}
+    footer .footNav .rightSide .sns {display:none;}
+    footer .footNav .leftSide {justify-content: left;}
+    footer .footNav .leftSide li {text-align:left;}
+    footer .footNav .leftSide li a {margin:0 20px 0 0;}
+}
+
+@media screen and (max-width: 575px) {
+    footer .footNav .leftSide {display:block; }
+    footer .footNav .leftSide li {display:inline-block;}
+    footer .footNav .leftSide li a {margin-right:15px;}
+}
+
+@media screen and (max-width: 520px) {
+    footer .footNav .leftSide li a {margin-right:10px; font-size:0.75rem;}
 }

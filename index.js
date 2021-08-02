@@ -120,7 +120,7 @@ function count(type) {
     resultElement.innerText = number;
 };
 
-
+console.log("hi");
 /*const mypageBtn = document.getElementsByClassId("mypageBtn");
 const mypageModal = mypageBtn.querySelector("#mypageModal");
 function (){
@@ -128,3 +128,24 @@ function (){
     mypageBtn.addEventListener('click', )
 } 작성중
 */
+
+
+//-----------반응형
+const mql = window.matchMedia("screen and (max-width: 743px)");
+if(mql.matches){
+    document.querySelector(".main p").innerHTML = `에어비앤비가<br />여행지를 찾아드릴게요!`;
+};
+
+
+//-----------스크롤 맨 아래
+$(window).scroll(function(){
+    const scrollTop = $(document).height();
+    const height = $(document).height();
+    const height_win = $(window).height();
+
+    if(Math.round($(window).scrollTop()) == $(document).height() - $(window).height()){
+        document.getElementById("mobileFixedTab").style.bottom = "-70px";
+    } else {
+        document.getElementById("mobileFixedTab").style.bottom = "0";
+    }
+})

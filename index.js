@@ -134,10 +134,22 @@ function (){
 const mql = window.matchMedia("screen and (max-width: 743px)");
 if(mql.matches){
     document.querySelector(".main p").innerHTML = `에어비앤비가<br />여행지를 찾아드릴게요!`;
+    const mobileSearch = document.querySelector(".mobileSearch");
+    const mobileNav = mobileSearch.parentElement;
+    const searchCloseBtn = mobileNav.querySelector(".closeBtn");
+    mobileSearch.addEventListener("click", ()=> {
+        mobileNav.classList.add("active");
+        document.body.style.overflow = "hidden";
+        searchCloseBtn.addEventListener("click", ()=>{
+            mobileNav.classList.remove("active");
+            document.body.style.overflow = "auto";
+        });
+    });
 };
 
 
 //-----------스크롤 맨 아래
+
 $(window).scroll(function(){
     const scrollTop = $(document).height();
     const height = $(document).height();

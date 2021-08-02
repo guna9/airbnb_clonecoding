@@ -72,8 +72,6 @@
     .naturalLife a span,
     .startHosting a span {font-size:0.9rem; padding:7px 14px;}
 
-    
-
 }
 
 
@@ -81,11 +79,10 @@
     .main {padding-top:35vw; padding-bottom:0;}
     .main > a {margin-bottom:15vw;}
     
-    
 }
 
 /*full size main*/
-@media screen and (max-width:949px){
+@media screen and (max-width:949px) {
     .main {padding-top:51vw; padding-bottom:8vw; background:url(./img/main_949.jpg)no-repeat center bottom; background-size:cover;}
     #container section > h1 {font-size:1.65rem; padding-top:10px;}
     .naturalLife, 
@@ -124,7 +121,7 @@
     .nearTravel ul {width:260%;}
     
     .liveTravel .wrap {padding-bottom:20px !important;}
-    .liveTravel ul {width:167vh;}
+    .liveTravel ul {width:306%; max-width:1120px;}
     .liveTravel button {display:none;}
 
     .naturalLife a,
@@ -133,7 +130,7 @@
     .naturalLife a p,
     .startHosting a p {width:100%; }
 
-    .enjoyTravel ul {width:125vh;}
+    .enjoyTravel ul {width:225%; max-width:822px;}
     .enjoyTravel ul li {width:32.5%;}
 
     .startHosting {padding-bottom:40px;}

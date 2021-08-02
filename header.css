@@ -66,14 +66,38 @@
 .mobileNav .mobileSearch span svg {display:inline-block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible; vertical-align: middle; }
 .mobileNav .mobileSearch form {width:100%;}
 .mobileNav .mobileSearch form input[type="text" i] {width:100%; border:none; font-size:1rem; margin-top:2px;}
+.mobileNav .closeBtn {display:none; padding:12px 0; font-size:1rem; font-weight:bold;}
+.mobileNav .mobileNavContent {display:none;}
+.mobileNav .mobileNavContent span {display:block; font-size:0.78rem; font-weight:bold; padding:18px 0 10px 7px; color:#333;}
+.mobileNav .mobileNavContent > a {
+    width:100%; margin:10px 0; text-align:left; font-size:1.15rem; font-weight:bold;
+    border-radius:50px; box-sizing: border-box; padding:12px 20px 15px 20px;
+    background-color:white; border:none; box-shadow:1px 5px 15px rgb(0 0 0 / 15%);
+    color: #6F019C;
+}
+.mobileNav .mobileNavContent .wrap {box-sizing: border-box; padding-left:5px; margin-top:2px; height:65vh; overflow-y:scroll;}
+.mobileNav .mobileNavContent .wrap li {display:inline-block; width:100%; margin-bottom:13px;}
+.mobileNav .mobileNavContent .wrap li a {width:100%; color:black;}
+.mobileNav .mobileNavContent .wrap li img {width:13%; margin-right:5%; border-radius:5px; float:left;}
+.mobileNav .mobileNavContent .wrap .nearTravelTxt {float:left; width:80%;}
+.mobileNav .mobileNavContent .wrap .nearTravelTxt span {padding:5px 0 0 0; font-size:1rem; font-weight:normal;}
+.mobileNav .mobileNavContent .wrap .nearTravelTxt p {font-size:0.78rem; color:#444;}
+
+.mobileNav.active {height:100vh; background:white;}
+.mobileNav.active .mobileSearch {box-shadow:none !important; border:1px solid #dfdfdf  !important; background:rgba(0, 0, 0, 0.03); width:85%; float:left;}
+.mobileNav.active .mobileNavContent {display:inline-block; width:100%;}
+.mobileNav.active .closeBtn {display:block; float:right; }
+/*.mobileNav.active*/
+
 
 /*모바일 하단 고정 탭*/
 #mobileFixedTab {display:none; position:fixed; width:100%; padding:12px 0 8px 0; background:white; border-top:1px solid #cfcfcf; z-index:1;}
-#mobileFixedTab ul {display:flex; width:36%; margin:auto; justify-content: space-between;}
+#mobileFixedTab ul {display:flex; box-sizing:border-box; padding:0 25%; justify-content: space-between;}
 #mobileFixedTab ul li {}
-#mobileFixedTab ul li a {font-size:0.7rem; color:#111; font-weight:600;}
-#mobileFixedTab ul li a svg {color:rgb(176, 176, 176); margin:auto; padding-bottom:5px}
-#mobileFixedTab ul li a.active svg {color:rgb(255, 56, 92);}
+#mobileFixedTab ul li button {font-size:0.7rem; color:#111; font-weight:600;}
+#mobileFixedTab ul li button svg {display: block; width: 24px; height: 24px; color:rgb(176, 176, 176); margin:auto; padding-bottom:5px; fill: currentColor; stroke: none;}
+#mobileFixedTab ul li button.active svg {color:rgb(255, 56, 92); fill: none; stroke: currentcolor; stroke-width: 4; overflow: visible;}
+#mobileFixedTab ul li button:active svg {color:rgb(255, 56, 92);}
 
 
 

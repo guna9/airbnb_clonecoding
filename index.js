@@ -55,7 +55,6 @@ formBtn.forEach(
     }
 );
 
-
 const mypageBtn = document.getElementById('mypageBtn');
 const mypageModal = document.getElementById("mypageModal");
 
@@ -78,28 +77,31 @@ mypageBtn.addEventListener("click", handleClick);
 const loginModalBtn = mypageModal.querySelectorAll(".loginListBtn");
 const loginModal = document.getElementById("loginModal");
 
-function loginModalClick(){
-    loginModal.classList.add('active');
-    modalActiveBg.classList.add('active');
-    modalActiveBg.style.zIndex = "4";
-    document.body.style.overflow = "hidden";
-
-    const closeModalBtn = loginModal.querySelector(".closeBtn");
-    function closeBtnClick(){
-        loginModal.classList.remove("active");
-        modalActiveBg.classList.remove('active');
-        document.body.style.overflow = "auto";
-        modalActiveBg.style.zIndex = "3";
-    }
-    closeModalBtn.addEventListener("click", closeBtnClick);
-    modalActiveBg.addEventListener("click", closeBtnClick);
-}
 
 for(let i = 0; i < loginModalBtn.length; i ++){
     const item = loginModalBtn.item(i);
-    item.addEventListener("click", loginModalClick);
+    item.addEventListener("click", () => {
+        //modalActiveBg.classList.add("active");
+        loginModal.classList.add('active');
+        document.body.style.overflow = "hidden";
+        modalActiveBg.style.zIndex = "4";
+        modalActiveBg.style.display = "block";
+        
+
+        const closeModalBtn = loginModal.querySelector(".closeBtn");
+        closeModalBtn.addEventListener("click", () => {
+            console.log("active");
+            modalActiveBg.style.zIndex = "3";
+            loginModal.classList.remove("active");
+            //modalActiveBg.classList.remove("active");
+            modalActiveBg.style.display = "none";
+            document.body.style.overflow = "auto";
+        });
+    });
 } //loginListBtn 동일한 클래스선택자에게 이벤트를 줌
 //마이페이지-로그인 모달창 오픈
+
+
 
 
 function count(type) {
@@ -120,7 +122,7 @@ function count(type) {
     resultElement.innerText = number;
 };
 
-console.log("hi");
+
 /*const mypageBtn = document.getElementsByClassId("mypageBtn");
 const mypageModal = mypageBtn.querySelector("#mypageModal");
 function (){
@@ -140,9 +142,11 @@ if(mql.matches){
     mobileSearch.addEventListener("click", ()=> {
         mobileNav.classList.add("active");
         document.body.style.overflow = "hidden";
+
         searchCloseBtn.addEventListener("click", ()=>{
             mobileNav.classList.remove("active");
             document.body.style.overflow = "auto";
+        
         });
     });
 };

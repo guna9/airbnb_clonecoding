@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body {
+html, body {
     padding:0; margin:0;
     letter-spacing: -0.5px;
     font-family:Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue, 'Roboto', sans-serif !important;
     -webkit-font-smoothing: antialiased;
-
+    word-break:keep-all;
 }
 input[type="text" i] {padding:0; background:none;}
 input:focus {outline:none;}

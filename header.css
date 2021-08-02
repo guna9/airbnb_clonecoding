@@ -61,21 +61,21 @@
 
 /*모바일 nav*/
 .mobileNav {display:none; width:100%; box-sizing: border-box; padding:16px 24px 16px 24px;}
-.mobileNav .mobileSearch {display:flex; width:100%; border-radius:50px; border:1px solid #dfdfdf; box-sizing: border-box; padding:12px 20px 15px 20px; background:white;}
+.mobileNav .mobileSearch {display:flex; width:100%; border-radius:50px; border:1px solid #dfdfdf; box-sizing: border-box; padding:10px 20px 12px 20px; background:white;}
 .mobileNav .mobileSearch span {margin-right:16px;}
 .mobileNav .mobileSearch span svg {display:inline-block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible; vertical-align: middle; }
 .mobileNav .mobileSearch form {width:100%;}
-.mobileNav .mobileSearch form input[type="text" i] {width:100%; border:none; font-size:1rem; margin-top:2px;}
+.mobileNav .mobileSearch form input[type="text" i] {width:100%; border:none; font-size:0.95rem; margin-top:2px;}
 .mobileNav .closeBtn {display:none; padding:12px 0; font-size:1rem; font-weight:bold;}
 .mobileNav .mobileNavContent {display:none;}
 .mobileNav .mobileNavContent span {display:block; font-size:0.78rem; font-weight:bold; padding:18px 0 10px 7px; color:#333;}
 .mobileNav .mobileNavContent > a {
-    width:100%; margin:10px 0; text-align:left; font-size:1.15rem; font-weight:bold;
-    border-radius:50px; box-sizing: border-box; padding:12px 20px 15px 20px;
+    width:100%; margin:10px 0; text-align:left; font-size:1rem; font-weight:bold;
+    border-radius:50px; box-sizing: border-box; padding:10px 20px 12px 20px;
     background-color:white; border:none; box-shadow:1px 5px 15px rgb(0 0 0 / 15%);
     color: #6F019C;
 }
-.mobileNav .mobileNavContent .wrap {box-sizing: border-box; padding-left:5px; margin-top:2px; height:65vh; overflow-y:scroll;}
+.mobileNav .mobileNavContent .wrap {box-sizing: border-box; padding-left:5px; margin-top:2px;}
 .mobileNav .mobileNavContent .wrap li {display:inline-block; width:100%; margin-bottom:13px;}
 .mobileNav .mobileNavContent .wrap li a {width:100%; color:black;}
 .mobileNav .mobileNavContent .wrap li img {width:13%; margin-right:5%; border-radius:5px; float:left;}
@@ -85,9 +85,11 @@
 
 .mobileNav.active {height:100vh; background:white;}
 .mobileNav.active .mobileSearch {box-shadow:none !important; border:1px solid #dfdfdf  !important; background:rgba(0, 0, 0, 0.03); width:85%; float:left;}
-.mobileNav.active .mobileNavContent {display:inline-block; width:100%;}
+.mobileNav.active .mobileNavContent {display:inline-block; width:100%; height:81vh; overflow-y: scroll; padding-right:24px;} 
 .mobileNav.active .closeBtn {display:block; float:right; }
 /*.mobileNav.active*/
+
+#header.scroll .mobileNav.active .mobileNavContent {height:90vh; }
 
 
 /*모바일 하단 고정 탭*/
@@ -259,11 +261,16 @@
     #mobileFixedTab {display:block; bottom:0; transition:all 0.2s;}
 
     #header .topBar {background:#f7f7f7; color:#222;}
-    #header .topBar a {font-size: 0.78rem; color:black; padding-top:16px; padding-bottom:17px;}
+    #header .topBar a {font-size:12px; color:black; padding:16px 24px 17px 24px;}
 
     .nav {display:none;}
 
     #header.scroll.searchBtn {padding-bottom:0;}
     #header.scroll.searchBtn .mobileNav .mobileSearch {border:none; box-shadow:1px 5px 15px rgb(0 0 0 / 15%);}
     
+}
+
+@media screen and (max-width:395px) {
+    .mobileNav.active .mobileNavContent {height:77vh;}
+    #mobileFixedTab ul {padding:0 20%;}
 }

@@ -136,3 +136,18 @@
     .startHosting {padding-bottom:40px;}
     .startHosting a {background-position-x:right; background-position-y:bottom; background-size:160%; background-color:#222;}
 }
+
+@media screen and (max-width:395px) {
+    #container section {padding-left:14px; padding-right:14px;}
+    #container section > h1 {padding-right:30px;}
+    .main {height:143vw;}
+    .nearTravel ul {width:360% !important;}
+    .naturalLife a {background-size:cover;}
+    .naturalLife a, .startHosting a {padding-left:20px; padding-right:20px;}
+    .naturalLife h1, .startHosting h1 {font-size:1.5rem !important;}
+    .naturalLife a p, .startHosting a p {font-size:0.95rem;}
+}
+
+@media screen and (max-width:330px) {
+
+}

@@ -37,7 +37,7 @@ formBtn.forEach(
         button.addEventListener('click', () => {
             formBox.classList.add('active');
             formBtn[newIndex].classList.add("active");
-            
+            formBtn.classList.remove("active");
         });
         //다른 버튼을 클릭하면 해당모달 active 클래스 지움
     }
@@ -49,23 +49,14 @@ function seachBtnClick(){
     if(header.className !== "scroll"){
         console.log("not scroll");
         modalActiveBg.classList.remove("active");
+        formBtn.classList.remove("active");
     }
-    formBtn.classList.remove("active");
 }
 
 mypageBtn.addEventListener("click", () => {
     mypageModal.classList.toggle('active');
 });
 //마이페이지 모달창 오픈
-
-
-/*window.onclick = function(event){
-    if (event.target !== mypageModal){
-        console.log("lol");
-        mypageModal.classList.remove('active');
-    }
-}  모달창 밖을 눌렀을때 마이페이지 모달창 닫혀야 함  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal */
-
 
 
 const loginModalBtn = mypageModal.querySelectorAll(".loginListBtn");
@@ -77,6 +68,7 @@ for(let i = 0; i < loginModalBtn.length; i ++){
     item.addEventListener("click", () => {
         //modalActiveBg.classList.add("active");
         loginModal.classList.add('active');
+        mypageModal.classList.remove('active');
         document.body.style.overflow = "hidden";
         modalActiveBg.style.zIndex = "4";
         modalActiveBg.style.display = "block";
@@ -84,38 +76,64 @@ for(let i = 0; i < loginModalBtn.length; i ++){
         closeModalBtn.addEventListener("click", () => {
             console.log("active");
             modalActiveBg.style.zIndex = "3";
+            modalActiveBg.style.display = "none";
             loginModal.classList.remove("active");
             //modalActiveBg.classList.remove("active");
-            modalActiveBg.style.display = "none";
             document.body.style.overflow = "auto";
         });
+
+        window.onclick = function(event){
+            if (event.target == modalActiveBg){
+                console.log("lol");
+                modalActiveBg.style.display = "none";
+                loginModal.classList.remove('active');
+            }
+        }; /* 모달창 밖을 눌렀을때 마이페이지 모달창 닫혀야 함   */
     });
 } //loginListBtn 동일한 클래스선택자에게 이벤트를 줌
 //마이페이지-로그인 모달창 오픈
 
 
+//-------------게스트 인원 카운트
+
 function count(type) {
     const resultElement = document.getElementById('result');
-
-    let number = resultElement.innerText;
+    let count = resultElement.innerText;
 
     if(type === 'plus'){
-        number = parseInt(number) + 1;
+        count = parseInt(count) + 1;
     } else if(type === 'minus') {
-        number = parseInt(number) - 1;
-        if(number < 1) {
-            const minusBtn = document.getElementById("minus");
-            console.log("test");
-            
+        if(count >= 1) {
+            count = parseInt(count) - 1;
+        }
+        if(count == 0){
+            console.log("0일때 마이너스 버튼 스타일적용");
         }
     };
-    resultElement.innerText = number;
+    
+    resultElement.innerText = count;
 };
+
+//1. 카운트 올리기
+/*const countUp=function(){
+    count=count+1;
+    document.querySelector("#count").innerText=count;
+};
+//3. 0까지만 내리기 ver.2
+const countDown3=function(){
+    if(count!==0){
+        count=count-1;
+        document.querySelector("#count").innerText=count;
+    }
+};*/
+
+
+
+//-----------반응형
 
 const mobileFixedTab = document.getElementById("mobileFixedTab");
 const mobileLoginBtn = mobileFixedTab.querySelector(".loginBtn");
 
-//-----------반응형
 const mql = window.matchMedia("screen and (max-width: 744px)");
 if(mql.matches){
     document.querySelector(".main p").innerHTML = `에어비앤비가<br />여행지를 찾아드릴게요!`;

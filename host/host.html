@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href="./host.css" />
+</head>
+<body>
+    <div id="header">
+        <div class="nav">
+            <div class="logo leftSide">
+                <a href="../index.html">
+                    <div class="logoOriginal">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-label="에어비앤비 홈페이지" role="img" focusable="false" style="display:block;height:36px;width:36px;fill:#ffffff" >
+                            <path d="M16 1c2.008 0 3.463.963 4.751 3.269l.533 1.025c1.954 3.83 6.114 12.54 7.1 14.836l.145.353c.667 1.591.91 2.472.96 3.396l.01.415.001.228c0 4.062-2.877 6.478-6.357 6.478-2.224 0-4.556-1.258-6.709-3.386l-.257-.26-.172-.179h-.011l-.176.185c-2.044 2.1-4.267 3.42-6.414 3.615l-.28.019-.267.006C5.377 31 2.5 28.584 2.5 24.522l.005-.469c.026-.928.23-1.768.83-3.244l.216-.524c.966-2.298 6.083-12.989 7.707-16.034C12.537 1.963 13.992 1 16 1zm0 2c-1.239 0-2.053.539-2.987 2.21l-.523 1.008c-1.926 3.776-6.06 12.43-7.031 14.692l-.345.836c-.427 1.071-.573 1.655-.605 2.24l-.009.33v.206C4.5 27.395 6.411 29 8.857 29c1.773 0 3.87-1.236 5.831-3.354-2.295-2.938-3.855-6.45-3.855-8.91 0-2.913 1.933-5.386 5.178-5.42 3.223.034 5.156 2.507 5.156 5.42 0 2.456-1.555 5.96-3.855 8.907C19.277 27.766 21.37 29 23.142 29c2.447 0 4.358-1.605 4.358-4.478l-.004-.411c-.019-.672-.17-1.296-.714-2.62l-.248-.6c-1.065-2.478-5.993-12.768-7.538-15.664C18.053 3.539 17.24 3 16 3zm.01 10.316c-2.01.021-3.177 1.514-3.177 3.42 0 1.797 1.18 4.58 2.955 7.044l.21.287.174-.234c1.73-2.385 2.898-5.066 2.989-6.875l.006-.221c0-1.906-1.167-3.4-3.156-3.421h-.001z"></path>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="rightSide">
+                <button class="loginListBtn">호스팅 시작하기</button>
+            </div>
+        </div>
+    </div>
+    <div class="modalList">
+        <div id="languageModal">
+            <div class="modalTitle">
+                <button class="closeBtn"></button>
+            </div>
+            <div class="modalContent">
+                <div class="wrap">
+                    <form>
+                        <button class="active">언어와 지역</button>
+                        <button>통화</button>
+                    </form>
+                    <div class="languageContent content active">
+                        <h1>추천 언어 및 지역</h1>
+                        <ul>
+                            <li><a href="#;">English<span>Untied States</span></a></li>
+                            <li><a href="#;">English<span>Untied Kingdom</span></a></li>
+                        </ul>
+                        <h1>언어와 지역을 선택하세요.</h1>
+                        <ul>
+                            <li class="active"><a href="#;">한국어<span>대한민국</span></a></li>
+                            <li><a href="#;">Azərbaycan dili<span>Azərbaycan</span></a></li>
+                            <li><a href="#;">Bahasa Indonesia<span>Indonesia</span></a></li>
+                            <li><a href="#;">Bosanski<span>Bosna i Hercegovina</span></a></li>
+                            <li><a href="#;">Català<span>Espanya</span></a></li>
+                            <li><a href="#;">Čeština<span>Česká republika</span></a></li>
+                            <li><a href="#;">Crnogorski<span>Crna Gora</span></a></li>
+                            <li><a href="#;">Dansk<span>Danmark</span></a></li>
+                            <li><a href="#;">Deutsch<span>Deutschland</span></a></li>
+                            <li><a href="#;">Deutsch<span>Österreich</span></a></li>
+                            <li><a href="#;">Deutsch<span>Schweiz</span></a></li>
+                            <li><a href="#;">Eesti<span>Eesti</span></a></li>
+                            <li><a href="#;">English<span>Australia</span></a></li>
+                            <li><a href="#;">English<span>Canada</span></a></li>
+                            <li><a href="#;">English<span>Guyana</span></a></li>
+                            <li><a href="#;">English<span>India</span></a></li>
+                            <li><a href="#;">English<span>Ireland</span></a></li>
+                            <li><a href="#;">English<span>New Zealand</span></a></li>
+                            <li><a href="#;">English<span>Singapore</span></a></li>
+                            <li><a href="#;">English<span>United Arab Emirates</span></a></li>
+                            <li><a href="#;">Español<span>Argentina</span></a></li>
+                            <li><a href="#;">Español<span>Belice</span></a></li>
+                            <li><a href="#;">Español<span>Bolivia</span></a></li>
+                            <li><a href="#;">Español<span>Chile</span></a></li>
+                            <li><a href="#;">Español<span>Colombia</span></a></li>
+                            <li><a href="#;">Español<span>Costa Rica</span></a></li>
+                            <li><a href="#;">Español<span>Ecuador</span></a></li>
+                            <li><a href="#;">Español<span>El Salvador</span></a></li>
+                            <li><a href="#;">Español<span>España</span></a></li>
+                            <li><a href="#;">Español<span>Estados Unidos</span></a></li>
+                            <li><a href="#;">Español<span>Guatemala</span></a></li>
+                            <li><a href="#;">Español<span>Honduras</span></a></li>
+                            <li><a href="#;">Español<span>Latinoamérica</span></a></li>
+                            <li><a href="#;">Español<span>México</span></a></li>
+                            <li><a href="#;">Español<span>Nicaragua</span></a></li>
+                            <li><a href="#;">Español<span>Panamá</span></a></li>
+                            <li><a href="#;">Español<span>Paraguay</span></a></li>
+                            <li><a href="#;">Español<span>Perú</span></a></li>
+                            <li><a href="#;">Español<span>Venezuela</span></a></li>
+                            <li><a href="#;">Français<span>Belgique</span></a></li>
+                            <li><a href="#;">Français<span>Canada</span></a></li>
+                            <li><a href="#;">Français<span>France</span></a></li>
+                            <li><a href="#;">Français<span>Suisse</span></a></li>
+                            <li><a href="#;">Gaeilge<span>Éire</span></a></li>
+                            <li><a href="#;">Hrvatski<span>Hrvatska</span></a></li>
+                            <li><a href="#;">isiXhosa<span>eMzantsi Afrika</span></a></li>
+                            <li><a href="#;">isiZulu<span>iNingizimu Afrika</span></a></li>
+                            <li><a href="#;">Íslenska<span>Ísland</span></a></li>
+                            <li><a href="#;">Italiano<span>Italia</span></a></li>
+                            <li><a href="#;">Italiano<span>Svizzera</span></a></li>
+                            <li><a href="#;">Kisahili<span>Āfrika</span></a></li>
+                            <li><a href="#;">Latviešu<span>Latvija</span></a></li>
+                            <li><a href="#;">Lietuvių<span>Lietuva</span></a></li>
+                            <li><a href="#;">Magyar<span>Magyarország</span></a></li>
+                            <li><a href="#;">Malti<span>Malta</span></a></li>
+                            <li><a href="#;">Melayu<span>Malaysia</span></a></li>
+                            <li><a href="#;">Nederlands<span>België</span></a></li>
+                            <li><a href="#;">Nederlands<span>Nederland</span></a></li>
+                            <li><a href="#;">Norsk<span>Norge</span></a></li>
+                            <li><a href="#;">Polski<span>Polska</span></a></li>
+                            <li><a href="#;">Português<span>Brasil</span></a></li>
+                            <li><a href="#;">Português<span>Portugal</span></a></li>
+                            <li><a href="#;">Română<span>România</span></a></li>
+                            <li><a href="#;">Shqip<span>Shqipëri</span></a></li>
+                            <li><a href="#;">Slovenčina<span>Slovensko</span></a></li>
+                            <li><a href="#;">Slovenščina<span>Slovenjia</span></a></li>
+                            <li><a href="#;">Srpski<span>Srbija</span></a></li>
+                            <li><a href="#;">Suomi<span>Suomi</span></a></li>
+                            <li><a href="#;">Svenska<span>Sverige</span></a></li>
+                            <li><a href="#;">Tagalog<span>Pilipinas</span></a></li>
+                            <li><a href="#;">Tiếng Việt<span>Việt Nam</span></a></li>
+                            <li><a href="#;">Türkçe<span>Türkiye</span></a></li>
+                            <li><a href="#;">Ελληνικά<span>Ελλάδα</span></a></li>
+                            <li><a href="#;">Български<span>България</span></a></li>
+                            <li><a href="#;">Македонски<span>Северна Македонија</span></a></li>
+                            <li><a href="#;">Русский<span>Россия</span></a></li>
+                            <li><a href="#;">Українська<span>Україна</span></a></li>
+                            <li><a href="#;">ქართული<span>საქართველო</span></a></li>
+                            <li><a href="#;">Հայերեն<span>Հայաստան</span></a></li>
+                            <li><a href="#;">עברית<span>ישראל</span></a></li>
+                            <li><a href="#;">العربية<span>العالم</span></a></li>
+                            <li><a href="#;">हिन्दी<span>भारत</span></a></li>
+                            <li><a href="#;">ไทย<span>ประเทศไทย</span></a></li>
+                            <li><a href="#;">日本語<span>日本</span></a></li>
+                            <li><a href="#;">简体中文<span>美国</span></a></li>
+                            <li><a href="#;">繁體中文<span>美國</span></a></li>
+                            <li><a href="#;">简体中文<span>中国</span></a></li>
+                            <li><a href="#;">繁體中文<span>香港</span></a></li>
+                            <li><a href="#;">繁體中文<span>台灣</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="currencyContent content">
+                        <h1>통화를 선택하세요.</h1>
+                        <ul>
+                            <li class="active"><a href="#;">한국 원<span>KRW - ₩</span></a></li>
+                            <li><a href="#;">남아프리카공화국 란드<span>ZAR - R</span></a></li>
+                            <li><a href="#;">노르웨이 크로네<span>NOK - kr</span></a></li>
+                            <li><a href="#;">뉴질랜드 달러<span>NZD - $</span></a></li>
+                            <li><a href="#;">덴마크 크로네<span>DKK - kr</span></a></li>
+                            <li><a href="#;">러시아 루블<span>RUB - ₽</span></a></li>
+                            <li><a href="#;">루마니아 레우<span>RON - lei</span></a></li>
+                            <li><a href="#;">말레이시아 링깃<span>MYR - RM</span></a></li>
+                            <li><a href="#;">멕시코 페소<span>MXN - $</span></a></li>
+                            <li><a href="#;">모로코 디르함<span>MAD</span></a></li>
+                            <li><a href="#;">미국 달러<span>USD - $</span></a></li>
+                            <li><a href="#;">불가리아 레프<span>BGN - лв.</span></a></li>
+                            <li><a href="#;">브라질 레알<span>BRL - R$</span></a></li>
+                            <li><a href="#;">사우스아라비아 리얄<span>SAR - SR</span></a></li>
+                            <li><a href="#;">스웨덴 크로나<span>SEK - kr</span></a></li>
+                            <li><a href="#;">스위스 프랑<span>CHF</span></a></li>
+                            <li><a href="#;">신 타이완 달러<span>TWD - $</span></a></li>
+                            <li><a href="#;">싱가포르 달러<span>SGD - $</span></a></li>
+                            <li><a href="#;">아랍에미리트 디르함<span>AED - ﺩ.ﺇ</span></a></li>
+                            <li><a href="#;">영국 파운드<span>GBP - £</span></a></li>
+                            <li><a href="#;">우루과이 페소<span>UYU - $U</span></a></li>
+                            <li><a href="#;">유로<span>EUR - €</span></a></li>
+                            <li><a href="#;">이스라엘 신 셰켈<span>ILS - ₪</span></a></li>
+                            <li><a href="#;">인도 루피<span>INR - ₹</span></a></li>
+                            <li><a href="#;">일본 엔<span>JPY - ¥</span></a></li>
+                            <li><a href="#;">중국 위안<span>CNY - ￥</span></a></li>
+                            <li><a href="#;">체코 코루나<span>CZK - Kč</span></a></li>
+                            <li><a href="#;">칠레 페소<span>CLP - $</span></a></li>
+                            <li><a href="#;">캐나다 달러<span>CAD - $</span></a></li>
+                            <li><a href="#;">코스타리카 콜론<span>CRC - ₡</span></a></li>
+                            <li><a href="#;">콜롬비아 페소<span>COP - $</span></a></li>
+                            <li><a href="#;">크로아티아 쿠나<span>HRK - kn</span></a></li>
+                            <li><a href="#;">태국 바트<span>THB - ฿</span></a></li>
+                            <li><a href="#;">터키 리라<span>TRY - ₺</span></a></li>
+                            <li><a href="#;">페루 솔<span>PEN - S/</span></a></li>
+                            <li><a href="#;">폴란드 즐로티<span>PLN - zł</span></a></li>
+                            <li><a href="#;">필리핀 페소<span>PHP - ₱</span></a></li>
+                            <li><a href="#;">헝가리 포린트<span>HUF - Ft</span></a></li>
+                            <li><a href="#;">호주 달러<span>AUD - $</span></a></li>
+                            <li><a href="#;">홍콩 달러<span>HKD - $</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loginModal">
+            <div class="modalTitle">
+                <button class="closeBtn"></button>
+                <h3>로그인 또는 회원 가입</h3>
+            </div>
+            <div class="modalContent">
+                <div class="wrap">
+                    <h1>에어비앤비에 오신 것을 환영합니다.</h1>
+                    <div class="form">
+                        <form>
+                            <label>
+                                <select placeholder="국가/지역">
+                                    <option value="" disabled selected hidden>국가/지역</option>
+                                    <option value="">한국 (+82)</option>
+                                    <option value="">미국 (+1)</option>
+                                    <option value="">스웨덴 (+46)</option>
+                                    <option value="">영국 (+44)</option>
+                                    <option value="">아일랜드 (+353)</option>
+                                </select>
+                            </label>
+                        </form>
+                        <form>
+                            <label>
+                                <input type="text" placeholder="전화번호" />
+                            </label>
+                        </form>
+                    </div>
+                    <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.</p>
+                    <a href="">개인정보 처리방침</a>
+                    <button type="button">계속</button>
+                    <span>또는</span>
+                    <div class="snsLogin">
+                        <ul>
+                            <li><a href="">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation" aria-hidden="true" focusable="false" style="height: 20px; width: 20px; display: block; fill: currentcolor;">
+                                    <path d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078V12h3.047V9.356c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.469h-2.796v8.385C19.612 22.954 24 17.99 24 12" fill="#1877F2"></path>
+                                    <path d="M16.671 15.469L17.203 12h-3.328V9.749c0-.949.465-1.874 1.956-1.874h1.513V4.922s-1.374-.234-2.686-.234c-2.741 0-4.533 1.66-4.533 4.668V12H7.078v3.469h3.047v8.385a12.09 12.09 0 003.75 0V15.47h2.796" fill="#FFF"></path>
+                                </svg>
+                                페이스북으로 로그인하기</a></li>
+                            <li><a href="">
+                                <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="height: 20px; width: 20px; display: block;">
+                                    <path d="M9 3.48c1.69 0 2.83.73 3.48 1.34l2.54-2.48C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.96l2.91 2.26C4.6 5.05 6.62 3.48 9 3.48z" fill="#EA4335"></path>
+                                    <path d="M17.64 9.2c0-.74-.06-1.28-.19-1.84H9v3.34h4.96c-.1.83-.64 2.08-1.84 2.92l2.84 2.2c1.7-1.57 2.68-3.88 2.68-6.62z" fill="#4285F4"></path>
+                                    <path d="M3.88 10.78A5.54 5.54 0 0 1 3.58 9c0-.62.11-1.22.29-1.78L.96 4.96A9.008 9.008 0 0 0 0 9c0 1.45.35 2.82.96 4.04l2.92-2.26z" fill="#FBBC05"></path>
+                                    <path d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.84-2.2c-.76.53-1.78.9-3.12.9-2.38 0-4.4-1.57-5.12-3.74L.97 13.04C2.45 15.98 5.48 18 9 18z" fill="#34A853"></path>
+                                </svg>
+                                구글로 로그인하기</a></li>
+                            <li><a href="">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true" focusable="false" style="height: 20px; width: 20px; display: block; fill: currentcolor;">
+                                    <path d="m13.3 2.1a5.1 5.1 0 0 1 3.8-2.1 5.1 5.1 0 0 1 -1.2 3.8 4.1 4.1 0 0 1 -3.6 1.7 4.5 4.5 0 0 1 1-3.4zm-5 3.7c-2.8 0-5.8 2.5-5.8 7.3 0 4.9 3.5 10.9 6.3 10.9 1 0 2.5-1 4-1s2.6.9 4 .9c3.1 0 5.3-6.4 5.3-6.4a5.3 5.3 0 0 1 -3.2-4.9 5.2 5.2 0 0 1 2.6-4.5 5.4 5.4 0 0 0 -4.7-2.4c-2 0-3.5 1.1-4.3 1.1-.9 0-2.4-1-4.2-1z"></path>
+                                </svg>
+                                Apple 계정으로 계속하기</a></li>
+                            <li><a href="">
+                                <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height: 20px; width: 20px; display: block; fill: currentcolor;">
+                                    <path d="m22.5 4h-21c-.83 0-1.5.67-1.5 1.51v12.99c0 .83.67 1.5 1.5 1.5h20.99a1.5 1.5 0 0 0 1.51-1.51v-12.98c0-.84-.67-1.51-1.5-1.51zm.5 14.2-6.14-7.91 6.14-4.66v12.58zm-.83-13.2-9.69 7.36c-.26.2-.72.2-.98 0l-9.67-7.36h20.35zm-21.17.63 6.14 4.67-6.14 7.88zm.63 13.37 6.3-8.1 2.97 2.26c.62.47 1.57.47 2.19 0l2.97-2.26 6.29 8.1z"></path>
+                                </svg>
+                                이메일로 로그인하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            하이
+        </div>
+    </div>
+    <div id="modalActiveBg"></div>
+    <div id="container">
+        <section class="main">
+            <div class="leftContent content">
+                <h1>에어비앤비의 핵심을 이루는 호스팅</h1>
+                <button arial-label="스크롤하려면 누르세요"></button>
+            </div>
+            <div class="rightContent content">
+                <video class="videoMain" autoplay crossorigin="anonymous" playsinline preload="auto" style="object-fit:cover; object-position:center top;">
+                    <source src="./img/host_video_main.mp4" type="video/mp4" />
+                </video>
+                <div class="videoText">
+                    <button class="videoPlay">play</button>
+                    <img src="" alt="호스트 이름" />
+                    <span>필라델피아의 호스트</span>
+                </div>
+            </div>
+        </section>
+        <section class="startHosting">
+            <div class="wrap">
+                <h1>언제 어디서든<br>호스팅하실 수 있습니다.</h1>
+                <div class="imageSlide">
+                    <div class="slideWrap">
+                        <ul>
+                            <li>
+                                <a href="#;"><img src="./img/host_reka.jpg" alt="" /></a>
+                                <div class="textBox">
+                                    <p>스튜디오 호스팅 덕에 새로운 삶을 사는 느낌이에요. 좋은 인연과 잊을 수 없는 추억은 덤이죠</p>
+                                    <img src="./img/text_reka.png" alt="호스트 이름" />
+                                    <span>밀라노의 호스트</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#;"><img src="./img/host_darrel.jpg" alt="" /></a>
+                                <div class="textBox">
+                                    <p>집을 숙소로 호스팅하면서 자영업자가 되어 경제적 자유에 한 걸음 더 가까워질 수 있었어요.</p>
+                                    <img src="./img/text_darrel.png" alt="호스트 이름" />
+                                    <span>애틀랜타의 호스트</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#;"><img src="./img/host_nerina.jpg" alt="" /></a>
+                                <div class="textBox">
+                                    <p>파스타 만들기 체험을 호스팅함으로써 문화 보존에 기여할 수 있습니다.</p>
+                                    <img src="./img/text_nerina.png" alt="호스트 이름" />
+                                    <span>팔룸바라사비나의 호스트</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#;"><img src="./img/host_clair.jpg" alt="" /></a>
+                                <div class="textBox">
+                                    <p>에어비앤비 덕분에 제가 제일 좋아하는 일을 업으로 삼을 수 있게 되었어요. 바로 집에서 게스트를 맞이하고 돌보는 일이죠.</p>
+                                    <img src="./img/text_clair.png" alt="호스트 이름" />
+                                    <span>치앙마이의 호스트</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#;"><img src="./img/host_mohammed.jpg" alt="" /></a>
+                                <div class="textBox">
+                                    <p>베두인 텐트 호스팅을 통해 세계 각지에서 온 분들을 만날 수 있었습니다.</p>
+                                    <img src="./img/text_mohammed.png" alt="호스트 이름" />
+                                    <span>와디럼의 호스트</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#;"><img src="./img/host_marko.jpg" alt="" /></a>
+                                <div class="textBox">
+                                    <p>게스트가 소중한 사람들과 자연 속에서 교감할 수 있도록 친환경 숙소를 호스팅하는 게 참 보람 있어요.</p>
+                                    <img src="./img/text_marko.png" alt="호스트 이름" />
+                                    <span>파라치의 호스트</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button><</button>
+                    <button>></button>
+                </div>
+                <div class="hostingForm">
+                    <form>
+                        <label>어떤 종류의 숙소인가요?</label>
+                        <select>
+                            <option>공간전체</option>
+                            <option>개인실</option>
+                            <option>다인실</option>
+                        </select>
+                        <label>숙박 인원은 몇 명인가요?</label>
+                        <select>
+                            <option>게스트 1명</option>
+                            <option>게스트 2명</option>
+                            <option>게스트 3명</option>
+                            <option>게스트 4명</option>
+                            <option>게스트 5명</option>
+                        </select>
+                        <label>숙소 위치는 어디인가요?</label>
+                        <select>
+                            <option>Goyang-si</option>
+                        </select>
+                    </form>
+                </div>
+                <p>월 최대 <span>￦651,495</span>의 수입을 올리세요.</p>
+                <button>에어비앤비가 예상 수입을 산정하는 방법</button>
+                <div class="hostingKind">
+                    <ul>
+                        <li><a href="#;">
+                            <img src="./img/hostingRoom.jpg" alt="" />
+                            <span>숙소 호스팅하기</span>
+                        </a></li>
+                        <li><a href="#;">
+                            <img src="./img/hostingExperience.jpg" alt="" />
+                            <span>체험 호스팅하기</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="hostingInfo">
+            <h1>성공적인 호스팅에 유용한 자료</h1>
+            <ul>
+                <li><a href="#;">
+                    <img src="./img/infoImg1.jpg" alt=""/>
+                    <span></span>
+                </a></li>
+                <li><a href="#;">
+                    <img src="./img/infoImg2.jpg" alt=""/>
+                    <span></span>
+                </a></li>
+                <li><a href="#;">
+                    <img src="./img/infoImg3.jpg" alt=""/>
+                    <span></span>
+                </a></li>
+            </ul>
+        </section>
+        <section class="hostingWithAirbnb">
+            <div class="leftContent content">
+                <video class="videoFoot" autoplay crossorigin="anonymous" muted playsinline preload="none" style="object-fit:cover; object-position:center top;">
+                    <source src="./img/host_video_foot.mp4" type="video/mp4" />
+                </video>
+                <div class="videoText">
+                    <button class="videoPlay">play</button>
+                </div>
+            </div>
+            <div class="rightContent content">
+                <h1>에어비앤비에서 호스팅을 시작해보세요.</h1>
+                <p>
+                    에어비앤비 호스트가 되어보세요. 에어비앤비가 모든 단계에서 도와드립니다.
+                </p>
+                <button>시작하기</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="map">
+            <ul>
+                <h4>소개</h4>
+                <li><a href="#;">에어비앤비 이용 방법</a></li>
+                <li><a href="#;">뉴스룸</a></li>
+                <li><a href="#;">에어비앤비 2021</a></li>
+                <li><a href="#;">투자자 정보</a></li>
+                <li><a href="#;">에어비앤비 플러스</a></li>
+                <li><a href="#;">에어비앤비 Luxe</a></li>
+                <li><a href="#;">호텔투나잇</a></li>
+                <li><a href="#;">에어비앤비 비즈니스 프로그램</a></li>
+                <li><a href="#;">호스트 분들이 있기에 가능합니다.</a></li>
+                <li><a href="#;">채용정보</a></li>
+                <li><a href="#;">창립자 편지</a></li>
+            </ul>
+            <ul>
+                <h4>커뮤니티</h4>
+                <li><a href="#;">다양성 및 소속감</a></li>
+                <li><a href="#;">접근성</a></li>
+                <li><a href="#;">에어비앤비 어소시에이트</a></li>
+                <li><a href="#;">구호 인력을 위한 숙소</a></li>
+                <li><a href="#;">게스트 추천</a></li>
+                <li><a href="#;">Airbnb.org</a></li>
+            </ul>
+            <ul>
+                <h4>호스팅하기</h4>
+                <li><a href="#;">숙소 호스팅</a></li>
+                <li><a href="#;">온라인 체험 호스팅하기</a></li>
+                <li><a href="#;">체험 호스팅하기</a></li>
+                <li><a href="#;">책임감 있는 호스팅</a></li>
+                <li><a href="#;">자료 센터</a></li>
+                <li><a href="#;">커뮤니티 센터</a></li>
+            </ul>
+            <ul>
+                <h4>에어비앤비 지원</h4>
+                <li><a href="#;">에어비앤비의 코로나19 대응 방안</a></li>
+                <li><a href="#;">도움말 센터</a></li>
+                <li><a href="#;">예약 취소 옵션</a></li>
+                <li><a href="#;">에어비앤비 이웃 민원 지원</a></li>
+                <li><a href="#;">신뢰와 안전</a></li>
+            </ul>
+        </div>
+        <div class="footNav">
+            <div class="rightSide">
+                <ul class="nation">
+                    <li><a href="#;">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="height:16px;width:16px;fill:currentColor; vertical-align:middle;" aria-hidden="true" role="presentation" focusable="false">
+                            <path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path>
+                        </svg>
+                        <span>한국어(KR)</span>
+                    </a></li>
+                    <li><a href="#;">
+                        ₩ <span>KRW</span>
+                    </a></li>
+                </ul>
+                <ul class="sns">
+                    <li><a href="#;">
+                        <svg viewBox="0 0 32 32" role="img" aria-hidden="false" aria-label="페이스북으로 이동하기" focusable="false" style="height:18px;width:18px;display:block;fill:currentColor">
+                            <path d="m8 14.41v-4.17c0-.42.35-.81.77-.81h2.52v-2.08c0-4.84 2.48-7.31 7.42-7.35 1.65 0 3.22.21 4.69.64.46.14.63.42.6.88l-.56 4.06c-.04.18-.14.35-.32.53-.21.11-.42.18-.63.14-.88-.25-1.78-.35-2.8-.35-1.4 0-1.61.28-1.61 1.73v1.8h4.52c.42 0 .81.42.81.88l-.35 4.17c0 .42-.35.71-.77.71h-4.21v16c0 .42-.35.81-.77.81h-5.21c-.42 0-.8-.39-.8-.81v-16h-2.52a.78.78 0 0 1 -.78-.78" fill-rule="evenodd"></path>
+                        </svg>
+                    </a></li>
+                    <li><a href="#;">
+                        <svg viewBox="0 0 32 32" role="img" aria-hidden="false" aria-label="트위터로 이동하기" focusable="false" style="height:18px;width:18px;display:block;fill:currentColor">
+                            <path d="m31 6.36c-1.16.49-2.32.82-3.55.95 1.29-.76 2.22-1.87 2.72-3.38a13.05 13.05 0 0 1 -3.91 1.51c-1.23-1.28-2.75-1.94-4.51-1.94-3.41 0-6.17 2.73-6.17 6.12 0 .49.07.95.17 1.38-4.94-.23-9.51-2.6-12.66-6.38-.56.95-.86 1.97-.86 3.09 0 2.07 1.03 3.91 2.75 5.06-1-.03-1.92-.3-2.82-.76v.07c0 2.89 2.12 5.42 4.94 5.98-.63.17-1.16.23-1.62.23-.3 0-.7-.03-1.13-.13a6.07 6.07 0 0 0 5.74 4.24c-2.22 1.74-4.78 2.63-7.66 2.63-.56 0-1.06-.03-1.43-.1 2.85 1.84 6 2.76 9.41 2.76 7.29 0 12.83-4.01 15.51-9.3 1.36-2.66 2.02-5.36 2.02-8.09v-.46c-.03-.17-.03-.3-.03-.33a12.66 12.66 0 0 0 3.09-3.16" fill-rule="evenodd"></path>
+                        </svg>
+                    </a></li>
+                    <li><a href="#;">
+                        <svg viewBox="0 0 24 24" role="img" aria-hidden="false" aria-label="인스타그램으로 이동하기" focusable="false" style="height:18px;width:18px;display:block;fill:currentColor">
+                            <path d="m23.09.91c-.61-.61-1.33-.91-2.17-.91h-17.84c-.85 0-1.57.3-2.17.91s-.91 1.33-.91 2.17v17.84c0 .85.3 1.57.91 2.17s1.33.91 2.17.91h17.84c.85 0 1.57-.3 2.17-.91s.91-1.33.91-2.17v-17.84c0-.85-.3-1.57-.91-2.17zm-14.48 7.74c.94-.91 2.08-1.37 3.4-1.37 1.33 0 2.47.46 3.41 1.37s1.41 2.01 1.41 3.3-.47 2.39-1.41 3.3-2.08 1.37-3.41 1.37c-1.32 0-2.46-.46-3.4-1.37s-1.41-2.01-1.41-3.3.47-2.39 1.41-3.3zm12.66 11.63c0 .27-.09.5-.28.68a.92.92 0 0 1 -.67.28h-16.7a.93.93 0 0 1 -.68-.28.92.92 0 0 1 -.27-.68v-10.13h2.2a6.74 6.74 0 0 0 -.31 2.05c0 2 .73 3.71 2.19 5.12s3.21 2.12 5.27 2.12a7.5 7.5 0 0 0 3.75-.97 7.29 7.29 0 0 0 2.72-2.63 6.93 6.93 0 0 0 1-3.63c0-.71-.11-1.39-.31-2.05h2.11v10.12zm0-13.95c0 .3-.11.56-.31.77a1.05 1.05 0 0 1 -.77.31h-2.72c-.3 0-.56-.11-.77-.31a1.05 1.05 0 0 1 -.31-.77v-2.58c0-.29.11-.54.31-.76s.47-.32.77-.32h2.72c.3 0 .56.11.77.32s.31.47.31.76z" fill-rule="evenodd"></path>
+                        </svg>
+                    </a></li>
+                    <li><a href="#;">
+                        <svg viewBox="0 0 1024 1024" role="img" aria-hidden="false" aria-label="네이버 블로그로 이동하기" focusable="false" style="height:18px;width:18px;display:block;fill:currentColor">
+                            <path d="m984 1024h-944c-22.1 0-40-17.9-40-40v-944c0-22.1 17.9-40 40-40h944c22.1 0 40 17.9 40 40v944c0 22.1-17.9 40-40 40z" fill="#00c73c"></path>
+                            <path d="m757 203.2h-490.4c-70.4 0-127.5 57.1-127.5 127.5v303.5c0 70.7 57.3 127.9 127.9 127.9h173.8l58.7 101.6c5.4 9.3 18.9 9.3 24.2 0l58.7-101.6h174.2c70.6 0 128.5-57.8 128.5-128.5v-302.4c0-70.7-57.3-128-128.1-128z" fill="#fff"></path>
+                            <g fill="#ff812c">
+                                <path d="m390.7 495.6c0 38.7-28 68.5-62.1 68.5-17.4 0-30.1-6-38.7-15.8v12.2h-38.9v-173.1h38.9v55.5c8.6-9.9 21.3-15.8 38.7-15.8 34 0 62.1 29.8 62.1 68.5zm-36.4 0c0-21.1-14-34.3-33.4-34.3s-33.4 13.2-33.4 34.3 14 34.3 33.4 34.3c19.3 0 33.4-13.2 33.4-34.3z"></path>
+                                <path d="m477.6 495.6c0-38.7 30.6-68.5 68.8-68.5s68.8 29.9 68.8 68.5c0 38.7-30.6 68.5-68.8 68.5s-68.8-29.8-68.8-68.5zm101.1 0c0-19.9-14-33.2-32.3-33.2s-32.3 13.2-32.3 33.2c0 19.9 14 33.2 32.3 33.2 18.2 0 32.3-13.2 32.3-33.2z"></path>
+                                <path d="m704.6 616.1c34.5 0 68.5-18.4 68.5-62.1v-123.3h-37.9v13.2c-8.6-10.6-21-16.9-37.9-16.9-36.9 0-63.9 30.1-63.9 66 0 35.8 27 65.9 63.9 65.9 16.9 0 29.3-6.2 37.9-16.9v12c0 18.4-11.2 27.8-29.3 27.8h-1.3zm-.7-90.5c-19.9 0-34-13.2-34-32.6s14-32.6 34-32.6c19.9 0 34 13.2 34 32.6s-14.1 32.6-34 32.6z"></path>
+                                <path d="m394.3 382.7v35.1c13.4 2.6 21.3 11.8 21.3 27.4v115.3h38.9v-115.3c0-40.3-28.6-59.4-60.2-62.5z"></path>
+                            </g>
+                        </svg>
+                    </a></li>
+                    <li><a href="#;">
+                        <svg enable-background="new 0 0 1024 1024" viewBox="0 0 1024 1024" role="img" aria-hidden="false" aria-label="네이버 포스트로 이동하기" focusable="false" style="height:18px;width:18px;display:block;fill:currentColor">
+                            <path d="m984 1024h-944c-22.1 0-40-17.9-40-40v-944c0-22.1 17.9-40 40-40h944c22.1 0 40 17.9 40 40v944c0 22.1-17.9 40-40 40z" fill="#fff"></path>
+                            <g fill="#00c73c">
+                                <path d="m0 198h1024v7h-1024z"></path>
+                                <path d="m0 405h1024v7h-1024z"></path>
+                                <path d="m0 612h1024v7h-1024z"></path>
+                                <path d="m0 819h1024v7h-1024z"></path>
+                            </g>
+                            <path d="m307 537 188.2 324.1c7.5 12.9 26.1 12.9 33.6 0l188.2-324.1z" fill="#f4e49d"></path>
+                            <path d="m307 0h410v537h-410z" fill="#00e831"></path>
+                            <path d="m392 0h240v537h-240z" fill="#00c73c"></path>
+                            <path d="m392 148.5v240h240v-240zm188 182h-47.8l-41.2-62.8v62.8h-47v-124h45.8l42.2 62.4v-62.4h48z" fill="#fff"></path>
+                            <path d="m632 0h85v537h-85z" fill="#00a32a"></path>
+                            <path d="m528.8 861.1 188.2-324.1h-85l-119.5 333.7c6.3-.1 12.6-3.3 16.3-9.6z" fill="#e0c141"></path>
+                            <path d="m448.8 781.2 46.4 79.9c7.5 12.9 26.1 12.9 33.6 0l46.4-79.9z" fill="#2d2d2d"></path>
+                        </svg>
+                    </a></li>
+                </ul>
+            </div>
+            <ul class="leftSide">
+                <li><span>© 2021 Airbnb, Inc.</span></li>
+                <li><a href="#;">개인정보 처리방침</a></li>
+                <li><a href="#;">이용약관</a></li>
+                <li><a href="#;">사이트맵</a></li>
+                <li><a href="#;">한국의 변경된 환불 정책</a></li>
+                <li><a href="#;">회사 세부정보</a></li>
+            </ul>
+            
+        </div>
+    </footer>    
+
+    
+    <script type="text/javascript" src="./host.js"></script>
+    <script type="text/javascript">
+
+    </script>
+</body>
+</html>

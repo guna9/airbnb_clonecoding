@@ -205,16 +205,37 @@
 
 
 /* 회원가입/로그인 & 국가지역 모달 */
-#loginModal {position:fixed; width:37vw; max-width:568px; height:90vh; left:31.5vw; background:white; border-radius:10px; z-index:5; top:100vh; transition:all 0.2s;}
-#loginModal.active {display:block; top:5vh; }
-#loginModal .modalTitle {height:10%; display:flex; align-items: center; justify-content: center; border-bottom:1px solid #e9e9e9;}
-#loginModal .modalTitle button {position:absolute; left:20px; cursor:pointer;}
-#loginModal .modalTitle h3 {text-align:center; font-size: 1.02rem;}
+.modalList {letter-spacing:-0.3px;}
+.modalList > div {position:fixed; height:90vh; background:white; border-radius:10px; z-index:5; top:100vh; transition:all 0.2s;}
+.modalList > div .modalTitle {height:10%; display:flex; align-items: center; justify-content: center; border-bottom:1px solid #e9e9e9;}
+.modalList > div .modalTitle button {position:absolute; left:20px; width:20px; height:20px; background:url('data:image/svg+xml, <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;"><path d="m6 6 20 20" /><path d="m26 6-20 20" /></svg>') no-repeat; }
+.modalList > div.active {display:block; top:5vh; }
+.modalList > div .modalContent {height:90%; overflow-y:scroll;}
+.modalList > div .modalContent .wrap {box-sizing:border-box; padding:30px 25px;  }
+.modalList > div .modalContent h1 {font-size:1.4rem; margin-bottom:23px;}
+.modalList > div .modalContent .content {display:none;}
+.modalList > div .modalContent .content.active {display:block;}
+.modalList > div .modalContent .languageContent {}
+.modalList > div .modalContent .currencyContent {}
 
-#loginModal .modalContent {height:90%; overflow-y:scroll;}
-#loginModal .modalContent .wrap {box-sizing:border-box; padding:30px 25px;  }
+#languageModal {width:67vw; max-width:1032px; left:16.5vw;}
+#languageModal .modalTitle {border-bottom:none;}
+#languageModal .wrap {padding-top:5px;}
+#languageModal .wrap form {border-bottom:1px solid #dfdfdf;}
+#languageModal .wrap form button {padding:10px 5px 15px 5px; margin-right:15px; font-weight:bold; color:#444; font-size: 0.9rem; letter-spacing:-0.5px;}
+#languageModal .wrap form button.active {border-bottom:2px solid black;}
+#languageModal .wrap .content {padding-top:20px; overflow-x:hidden;}
+#languageModal ul {display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr; grid-gap: 10px;}
+#languageModal ul li {}
+#languageModal ul li.active {}
+#languageModal li a {box-sizing:border-box; padding:10px; border:1px solid white; border-radius:8px; font-size:0.95rem; color:#222;}
+#languageModal li a:hover {background:#f7f7f7;}
+#languageModal li.active a {color:black; font-weight:bold; border:1px solid black;}
+#languageModal li a span {display:block; font-size:0.8rem; color:#555;}
+
+#loginModal {width:37vw; max-width:568px; left:31.5vw; }
+#loginModal .modalTitle h3 {text-align:center; font-size: 1.02rem;}
 #loginModal .modalContent .form {position:relative; border:1px solid #cfcfcf; border-radius:10px; margin-bottom:10px;}
-#loginModal .modalContent h1 {font-size:1.4rem; margin-bottom:23px;}
 #loginModal .modalContent select,
 #loginModal .modalContent input {width:100%; border:none; box-sizing:border-box; padding:18px;}
 #loginModal .modalContent select {

@@ -58,10 +58,40 @@ mypageBtn.addEventListener("click", () => {
 });
 //마이페이지 모달창 오픈
 
+//
+const languageBtn = document.getElementById("languageBtn");
+const languageModal = document.getElementById("languageModal");
+
+
+languageBtn.addEventListener("click", () => {
+    languageModal.classList.add('active');
+    document.body.style.overflow = "hidden";
+    modalActiveBg.style.zIndex = "4";
+    modalActiveBg.style.display = "block";
+
+    const closeModalBtn = languageModal.querySelector(".closeBtn");
+    closeModalBtn.addEventListener("click", () => {
+        modalActiveBg.style.zIndex = "3";
+        modalActiveBg.style.display = "none";
+        languageModal.classList.remove("active");
+        document.body.style.overflow = "auto";
+    });
+
+    window.onclick = function(event){
+        if (event.target == modalActiveBg){
+            modalActiveBg.style.display = "none";
+            languageModal.classList.remove('active');
+            document.body.style.overflow = "auto";
+        }
+    };
+});
+
+
+//언어&통화 모달창 오픈
+
 
 const loginModalBtn = mypageModal.querySelectorAll(".loginListBtn");
 const loginModal = document.getElementById("loginModal");
-const closeModalBtn = loginModal.querySelector(".closeBtn");
 
 for(let i = 0; i < loginModalBtn.length; i ++){
     const item = loginModalBtn.item(i);
@@ -73,8 +103,8 @@ for(let i = 0; i < loginModalBtn.length; i ++){
         modalActiveBg.style.zIndex = "4";
         modalActiveBg.style.display = "block";
         
+        const closeModalBtn = loginModal.querySelector(".closeBtn");
         closeModalBtn.addEventListener("click", () => {
-            console.log("active");
             modalActiveBg.style.zIndex = "3";
             modalActiveBg.style.display = "none";
             loginModal.classList.remove("active");
@@ -84,11 +114,11 @@ for(let i = 0; i < loginModalBtn.length; i ++){
 
         window.onclick = function(event){
             if (event.target == modalActiveBg){
-                console.log("lol");
                 modalActiveBg.style.display = "none";
                 loginModal.classList.remove('active');
+                document.body.style.overflow = "auto";
             }
-        }; /* 모달창 밖을 눌렀을때 마이페이지 모달창 닫혀야 함   */
+        };
     });
 } //loginListBtn 동일한 클래스선택자에게 이벤트를 줌
 //마이페이지-로그인 모달창 오픈

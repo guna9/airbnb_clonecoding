@@ -21,11 +21,17 @@
 #container .main .rightContent .videoText span {}
 
 
-#container section.startHosting {}
+#container section.startHosting {background:black;}
 #container .startHosting .wrap {padding-left: 48px;}
-#container .startHosting .imageSlide {padding-top:60px;}
+#container .startHosting .imageSlide {padding-top:80px; position:relative;}
 #container .startHosting .slideWrap {} 
-#container .startHosting .slideWrap ul {display:flex; overflow:hidden;}
-#container .startHosting .slideWrap li {}
-#container .startHosting .slideWrap li a {box-sizing:border-box;}
-#container .startHosting .slideWrap li img {border-radius:8px;}
+#container .startHosting .slideWrap ul {display:flex; overflow:hidden; width:206%;}
+#container .startHosting .slideWrap li {width:16%;}
+#container .startHosting .slideWrap li a {box-sizing:border-box; height:75vh; padding:0 10px;}
+#container .startHosting .slideWrap li a img {border-radius:5px; height:100%;}
+#container .startHosting .slideWrap li .textBox {color:white; box-sizing:border-box; padding:30px 30px;}
+#container .startHosting .slideWrap li .textBox p {font-size:1.6rem; display:block;  margin-right:30px; margin-bottom:35px;}
+#container .startHosting .slideWrap li .textBox img {height:32px; display:block; margin-bottom:30px;}
+#container .startHosting .slideWrap li .textBox span {color:#888; }
+#container .startHosting .imageSlide button {position:absolute; left:59%; bottom:65px; width:30px; height:30px; border:1px solid white; color:white; border-radius:50%;}
+#container .startHosting .imageSlide button:last-child {margin-left:50px;}

@@ -59,32 +59,33 @@ mypageBtn.addEventListener("click", () => {
 //마이페이지 모달창 오픈
 
 //
-const languageBtn = document.getElementById("languageBtn");
+const languageBtn = document.querySelectorAll(".languageBtn");
 const languageModal = document.getElementById("languageModal");
 
-
-languageBtn.addEventListener("click", () => {
-    languageModal.classList.add('active');
-    document.body.style.overflow = "hidden";
-    modalActiveBg.style.zIndex = "4";
-    modalActiveBg.style.display = "block";
-
-    const closeModalBtn = languageModal.querySelector(".closeBtn");
-    closeModalBtn.addEventListener("click", () => {
-        modalActiveBg.style.zIndex = "3";
-        modalActiveBg.style.display = "none";
-        languageModal.classList.remove("active");
-        document.body.style.overflow = "auto";
-    });
-
-    window.onclick = function(event){
-        if (event.target == modalActiveBg){
+for(var i = 0; i<languageBtn.length; i++) {
+    languageBtn[i].addEventListener("click", () => {
+        languageModal.classList.add('active');
+        document.body.style.overflow = "hidden";
+        modalActiveBg.style.zIndex = "4";
+        modalActiveBg.style.display = "block";
+        
+        const closeModalBtn = languageModal.querySelector(".closeBtn");
+        closeModalBtn.addEventListener("click", () => {
+            modalActiveBg.style.zIndex = "3";
             modalActiveBg.style.display = "none";
-            languageModal.classList.remove('active');
+            languageModal.classList.remove("active");
             document.body.style.overflow = "auto";
-        }
-    };
-});
+        });
+        
+        window.onclick = function(event){
+            if (event.target == modalActiveBg){
+                modalActiveBg.style.display = "none";
+                languageModal.classList.remove('active');
+                document.body.style.overflow = "auto";
+            }
+        };
+    });
+}
 
 
 //언어&통화 모달창 오픈

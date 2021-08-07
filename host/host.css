@@ -1,37 +1,96 @@
 @import "../reset.css";
 @import "../header.css";
 @import "../footer.css";
+ 
+#header .hostNav {width:100%; height:100px; box-sizing:border-box; padding:35px 48px;}
+.hostNav .leftSide {left:40px;}
+.hostNav .logoOriginal {width:64px; height:64px; margin-left:-14px; border-radius:50%; transition:all 0.2s;}
+.hostNav .logoOriginal:hover {background:#333;}
+.hostNav .logoOriginal svg {margin:auto; padding-top:13px; fill:white;}
 
+.hostNav.active {position:fixed; height:80px !important; background:white; padding:7px 62px !important;}
+.hostNav.active .leftSide {left:80px;}
+.hostNav.active .logoOriginal {width:0; height:0;}
+.hostNav.active .logoOriginal:hover {background:#e9e9e9;}
+.hostNav.active .logoOriginal svg {color:black !important; fill:black;}
 
 #container section {width:100%; }
 #container section .content {width:50%; box-sizing:border-box;}
 #container section .wrap {width:100%; box-sizing:border-box; padding-top:160px; padding-bottom:80px;}
 #container section h1 {font-size:4rem; line-height:4.3rem;}
+#container section li span {display:block;}
 
-#container section.main {background:black; color:white; height:100vh; display:flex;}
-#container .main .leftContent {position:relative; text-align:center; display:flex; align-items:center; padding:0 7%;}
-#container .main .leftContent h1 {padding:0 40px;}
-#container .main .leftContent button {position:absolute; bottom:48px; left:50%; margin-left:-15px; width:30px; height:30px; border-radius:50%; border:1px solid white;}
+.main {background:black; color:white; height:100vh; display:flex;}
+.main .leftContent {position:relative; text-align:center; display:flex; align-items:center; padding:0 7%;}
+.main .leftContent h1 {padding:0 40px 40px 40px;}
+.main .leftContent > a {position:absolute; bottom:48px; left:50%; margin-left:-15px; width:30px; height:30px; border-radius:50%;}
+.main .leftContent > a:hover {background:#333;}
+.main .rightContent {position:relative;}
+.main .rightContent video {width:100%; height:100%; display:block;}
+.main .rightContent .videoText {position:absolute; left:60px; bottom:48px; display:flex; flex-direction:column;}
+.main .rightContent .videoText button {width:40px; height:40px; border-radius:50%; background:rgba(0, 0, 0, 0.3); color:white; margin-bottom:30px;}
+.main .rightContent .videoText .videoPlay {display:block;}
+.main .rightContent .videoText .videoPause {display:none;}
+.main .rightContent .videoText.videoStop .videoPlay {display:none;}
+.main .rightContent .videoText.videoStop .videoPause {display:block;}
 
-#container .main .rightContent {position:relative;}
-#container .main .rightContent video {width:100%; height:100%; display:block;}
-#container .main .rightContent .videoText {position:absolute; left:20px; bottom:20px; display:flex; flex-direction:column;}
-#container .main .rightContent .videoText button {}
-#container .main .rightContent .videoText > img {}
-#container .main .rightContent .videoText span {}
+.main .rightContent .videoText > img {width:50%; margin-bottom:20px;}
+.main .rightContent .videoText span {font-size:1.2rem;}
+.main .rightSide {position:absolute; bottom:48px; right:48px;}
+.main .rightSide.active {position:fixed; top:14px; bottom:auto; z-index:2;}
+.main .rightSide .startBtn {
+    background:#E61E4D; color:white; font-weight:bold;
+    padding:15px 25px; border-radius:8px; font-size:1rem;
+}
 
+section.startHosting {position:relative;}
+.startHosting .bgBlack {width:100%; height:50%; background:black; position:absolute; bottom:0;  z-index:-1;}
+.startHosting .wrap {padding-left: 48px;}
+.startHosting .imageSlide {padding-top:80px; position:relative;}
+.startHosting .slideWrap {overflow:hidden;}
+.startHosting .slideWrap ul {display:flex; width:206%;}
+.startHosting .slideWrap li {width:16%;}
+.startHosting .slideWrap li a {box-sizing:border-box; padding:0 10px;}
+.startHosting .slideWrap li a img {border-radius:5px; width:100%; height:100%; object-fit: cover;}
+.startHosting .slideWrap li .textBox {display:none; color:white; box-sizing:border-box; padding:40px 30px 20px 10px;}
+.startHosting .slideWrap li.active .textBox {display:block;}
+.startHosting .slideWrap li .textBox p {font-size:1.6rem; display:block; line-height:1.9rem; margin-right:30px; margin-bottom:35px;}
+.startHosting .slideWrap li .textBox img {height:32px; display:block; margin-bottom:20px;}
+.startHosting .slideWrap li .textBox span {color:#888; }
+.startHosting .imageSlide button {position:absolute; left:60%; bottom:50px; width:30px; height:30px; background:#444; color:white; border-radius:50%;}
+.startHosting .imageSlide button:last-child {margin-left:40px;}
+.startHosting .imageSlide button:hover {background:#333;}
+.startHosting .imageSlide button svg {margin:auto;}
 
-#container section.startHosting {background:black;}
-#container .startHosting .wrap {padding-left: 48px;}
-#container .startHosting .imageSlide {padding-top:80px; position:relative;}
-#container .startHosting .slideWrap {} 
-#container .startHosting .slideWrap ul {display:flex; overflow:hidden; width:206%;}
-#container .startHosting .slideWrap li {width:16%;}
-#container .startHosting .slideWrap li a {box-sizing:border-box; height:75vh; padding:0 10px;}
-#container .startHosting .slideWrap li a img {border-radius:5px; height:100%;}
-#container .startHosting .slideWrap li .textBox {color:white; box-sizing:border-box; padding:30px 30px;}
-#container .startHosting .slideWrap li .textBox p {font-size:1.6rem; display:block;  margin-right:30px; margin-bottom:35px;}
-#container .startHosting .slideWrap li .textBox img {height:32px; display:block; margin-bottom:30px;}
-#container .startHosting .slideWrap li .textBox span {color:#888; }
-#container .startHosting .imageSlide button {position:absolute; left:59%; bottom:65px; width:30px; height:30px; border:1px solid white; color:white; border-radius:50%;}
-#container .startHosting .imageSlide button:last-child {margin-left:50px;}
+.hostingForm {background:black; color:white; text-align:center; font-weight:bold;}
+.hostingForm .formContent form {display:flex; flex-direction:column; align-items:center; font-weight:bold; }
+.hostingForm .formContent form label {font-size:2.5rem; color:#b0b0b0;}
+.hostingForm .formContent form select {background:none; border:none; border-bottom:2px solid white; font-size: 2.5rem; font-weight:bold; color:white; margin-bottom:40px; }
+.hostingForm .formContent form select option {color:black; font-size:0.9rem; font-weight:normal; padding:5px;}
+.hostingForm .wrap > p {font-size: 2.5rem; margin:15px 0 40px 0;}
+.hostingForm .wrap > button {color:white; font-size:0.95rem; font-weight:bold; line-height:0.7rem; border-bottom:2px solid white; margin-bottom:150px; padding:0;}
+.hostingForm .hostingContent {max-width:676px; margin:auto; padding-bottom:170px;}
+.hostingForm .hostingContent ul {display:flex;}
+.hostingForm .hostingContent li {width:50%; }
+.hostingForm .hostingContent li a {width:320px; height:338px; text-align:left; }
+.hostingForm .hostingContent li img {width:100%; height:100%; object-fit: cover; border-radius:8px; }
+.hostingForm .hostingContent li span {color:white; font-weight:bold; font-size:1.15rem; padding-top:10px;}
+
+.hostingInfo .wrap {padding-left: 48px; padding-right:48px;}
+.hostingInfo ul {padding-top:80px; display:flex; justify-content: space-between; padding-bottom:230px;}
+.hostingInfo li {width:32%;}
+.hostingInfo li a {width:100%; height:338px; }
+.hostingInfo li a img {width:100%; height:100%; object-fit: cover; border-radius:8px;}
+.hostingInfo li a span {font-size:1.4rem; font-weight:bold; color:black; padding-top:10px;}
+
+.hostingWithAirbnb {display:flex; background:black; color:white; height:100vh; }
+.hostingWithAirbnb .leftContent {position:relative;}
+.hostingWithAirbnb .leftContent video {width:100%; height:100%; display:block;}
+.hostingWithAirbnb .leftContent .videoText {position:absolute; left:20px; bottom:20px; display:flex; flex-direction:column;}
+.hostingWithAirbnb .leftContent .videoText button {}
+.hostingWithAirbnb .leftContent .videoText > img {}
+.hostingWithAirbnb .leftContent .videoText span {}
+.hostingWithAirbnb .rightContent {position:relative; text-align:center; display:flex; justify-content:center; flex-direction:column; padding:0 7%;}
+.hostingWithAirbnb .rightContent h1 {padding:0 20px 30px 20px;; font-size:3rem !important;}
+.hostingWithAirbnb .rightContent p {font-size:1.15rem;}
+.hostingWithAirbnb .rightContent button {position:absolute; bottom:48px; right:48px; padding:15px 30px; border-radius:8px; background:#E61E4D; color:white; font-weight:bold; font-size:1rem;}

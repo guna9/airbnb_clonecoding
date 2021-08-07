@@ -6,6 +6,7 @@ html, body {
     font-family:Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue, 'Roboto', sans-serif !important;
     -webkit-font-smoothing: antialiased;
     word-break:keep-all;
+    scroll-behavior: smooth;
 }
 
 input {appearance:none; -webkit-appearance:none; -webkit-border-radius:0; } /*ios대응*/

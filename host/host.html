@@ -9,18 +9,15 @@
 </head>
 <body>
     <div id="header">
-        <div class="nav">
+        <div class="hostNav">
             <div class="logo leftSide">
                 <a href="../index.html">
                     <div class="logoOriginal">
-                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-label="에어비앤비 홈페이지" role="img" focusable="false" style="display:block;height:36px;width:36px;fill:#ffffff" >
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-label="에어비앤비 홈페이지" role="img" focusable="false" style="display:block;height:36px;width:36px;" >
                             <path d="M16 1c2.008 0 3.463.963 4.751 3.269l.533 1.025c1.954 3.83 6.114 12.54 7.1 14.836l.145.353c.667 1.591.91 2.472.96 3.396l.01.415.001.228c0 4.062-2.877 6.478-6.357 6.478-2.224 0-4.556-1.258-6.709-3.386l-.257-.26-.172-.179h-.011l-.176.185c-2.044 2.1-4.267 3.42-6.414 3.615l-.28.019-.267.006C5.377 31 2.5 28.584 2.5 24.522l.005-.469c.026-.928.23-1.768.83-3.244l.216-.524c.966-2.298 6.083-12.989 7.707-16.034C12.537 1.963 13.992 1 16 1zm0 2c-1.239 0-2.053.539-2.987 2.21l-.523 1.008c-1.926 3.776-6.06 12.43-7.031 14.692l-.345.836c-.427 1.071-.573 1.655-.605 2.24l-.009.33v.206C4.5 27.395 6.411 29 8.857 29c1.773 0 3.87-1.236 5.831-3.354-2.295-2.938-3.855-6.45-3.855-8.91 0-2.913 1.933-5.386 5.178-5.42 3.223.034 5.156 2.507 5.156 5.42 0 2.456-1.555 5.96-3.855 8.907C19.277 27.766 21.37 29 23.142 29c2.447 0 4.358-1.605 4.358-4.478l-.004-.411c-.019-.672-.17-1.296-.714-2.62l-.248-.6c-1.065-2.478-5.993-12.768-7.538-15.664C18.053 3.539 17.24 3 16 3zm.01 10.316c-2.01.021-3.177 1.514-3.177 3.42 0 1.797 1.18 4.58 2.955 7.044l.21.287.174-.234c1.73-2.385 2.898-5.066 2.989-6.875l.006-.221c0-1.906-1.167-3.4-3.156-3.421h-.001z"></path>
                         </svg>
                     </div>
                 </a>
-            </div>
-            <div class="rightSide">
-                <button class="loginListBtn">호스팅 시작하기</button>
             </div>
         </div>
     </div>
@@ -253,20 +250,36 @@
         <section class="main">
             <div class="leftContent content">
                 <h1>에어비앤비의 핵심을 이루는 호스팅</h1>
-                <button arial-label="스크롤하려면 누르세요"></button>
+                <a href="#scrollSection" arial-label="스크롤하려면 누르세요">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display:block; fill:none; height:100%; width:16px; margin:auto; stroke:currentColor; stroke-width:4; overflow:visible; color:white;" >
+                        <path d="m28 12-11.2928932 11.2928932c-.3905243.3905243-1.0236893.3905243-1.4142136 0l-11.2928932-11.2928932"></path>
+                    </svg>
+                </a>
             </div>
             <div class="rightContent content">
                 <video class="videoMain" autoplay crossorigin="anonymous" playsinline preload="auto" style="object-fit:cover; object-position:center top;">
                     <source src="./img/host_video_main.mp4" type="video/mp4" />
                 </video>
                 <div class="videoText">
-                    <button class="videoPlay">play</button>
-                    <img src="" alt="호스트 이름" />
+                    <button class="videoPlay">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"  focusable="false" style="display: block; height: 16px; width: 100%; fill: white; margin:auto;">
+                            <path d="M27.024 14.273L6.008 2.013c-.461-.268-1-.342-1.517-.206A2 2 0 0 0 3 3.741V28.26a2.002 2.002 0 0 0 3.008 1.728l21.015-12.26a2.003 2.003 0 0 0 .001-3.454z"></path>
+                        </svg>
+                    </button>
+                    <button class="videoPause">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"  focusable="false" style="display: block; height: 100%; width: 100%; fill: white; margin:7px 8px 6px 7px;">
+                            <path d="M13 1v14H9V1zM7 1v14H3V1z"></path>
+                        </svg>
+                    </button>
+                    <img src="./img/text_clair.png" alt="호스트 이름" />
                     <span>필라델피아의 호스트</span>
+                </div>
+                <div class="rightSide">
+                    <button class="startBtn">호스팅 시작하기</button>
                 </div>
             </div>
         </section>
-        <section class="startHosting">
+        <section id="scrollSection" class="startHosting">
             <div class="wrap">
                 <h1>언제 어디서든<br>호스팅하실 수 있습니다.</h1>
                 <div class="imageSlide">
@@ -280,7 +293,7 @@
                                     <span>밀라노의 호스트</span>
                                 </div>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="#;"><img src="./img/host_darrel.jpg" alt="" /></a>
                                 <div class="textBox">
                                     <p>집을 숙소로 호스팅하면서 자영업자가 되어 경제적 자유에 한 걸음 더 가까워질 수 있었어요.</p>
@@ -322,14 +335,19 @@
                             </li>
                         </ul>
                     </div>
-                    <button><</button>
-                    <button>></button>
+                    <button>
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: rgb(255, 255, 255); stroke-width: 4; overflow: visible;"><path d="m20 28-11.29289322-11.2928932c-.39052429-.3905243-.39052429-1.0236893 0-1.4142136l11.29289322-11.2928932"></path></svg>
+                    </button>
+                    <button>
+                        <svg  viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: rgb(255, 255, 255); stroke-width: 4; overflow: visible;"><path d="m12 4 11.2928932 11.2928932c.3905243.3905243.3905243 1.0236893 0 1.4142136l-11.2928932 11.2928932"></path></svg>
+                    </button>
                 </div>
             </div>
+            <div class="bgBlack"></div>
         </section>
-        <section>
+        <section class="hostingForm">
             <div class="wrap">
-                <div class="hostingForm">
+                <div class="formContent">
                     <form>
                         <label>어떤 종류의 숙소인가요?</label>
                         <select>
@@ -353,7 +371,7 @@
                 </div>
                 <p>월 최대 <span>￦651,495</span>의 수입을 올리세요.</p>
                 <button>에어비앤비가 예상 수입을 산정하는 방법</button>
-                <div class="hostingKind">
+                <div class="hostingContent">
                     <ul>
                         <li><a href="#;">
                             <img src="./img/hostingRoom.jpg" alt="" />
@@ -368,21 +386,23 @@
             </div>
         </section>
         <section class="hostingInfo">
-            <h1>성공적인 호스팅에 유용한 자료</h1>
-            <ul>
-                <li><a href="#;">
-                    <img src="./img/infoImg1.jpg" alt=""/>
-                    <span></span>
-                </a></li>
-                <li><a href="#;">
-                    <img src="./img/infoImg2.jpg" alt=""/>
-                    <span></span>
-                </a></li>
-                <li><a href="#;">
-                    <img src="./img/infoImg3.jpg" alt=""/>
-                    <span></span>
-                </a></li>
-            </ul>
+            <div class="wrap">
+                <h1>성공적인 호스팅에<br>유용한 자료</h1>
+                <ul>
+                    <li><a href="#;">
+                        <img src="./img/infoImg1.jpg" alt=""/>
+                        <span>에어비앤비의<br>호스트 지원 방법 알아보기</span>
+                    </a></li>
+                    <li><a href="#;">
+                        <img src="./img/infoImg2.jpg" alt=""/>
+                        <span>슈퍼호스트에게<br>문의하기</span>
+                    </a></li>
+                    <li><a href="#;">
+                        <img src="./img/infoImg3.jpg" alt=""/>
+                        <span>더 많은 호스팅<br>자료 살펴보기</span>
+                    </a></li>
+                </ul>
+            </div>
         </section>
         <section class="hostingWithAirbnb">
             <div class="leftContent content">
@@ -396,7 +416,7 @@
             <div class="rightContent content">
                 <h1>에어비앤비에서 호스팅을 시작해보세요.</h1>
                 <p>
-                    에어비앤비 호스트가 되어보세요. 에어비앤비가 모든 단계에서 도와드립니다.
+                    에어비앤비 호스트가 되어보세요.<br>에어비앤비가 모든 단계에서 도와드립니다.
                 </p>
                 <button>시작하기</button>
             </div>
@@ -448,13 +468,13 @@
         <div class="footNav">
             <div class="rightSide">
                 <ul class="nation">
-                    <li><a href="#;">
+                    <li class="languageBtn"><a href="#;">
                         <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="height:16px;width:16px;fill:currentColor; vertical-align:middle;" aria-hidden="true" role="presentation" focusable="false">
                             <path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path>
                         </svg>
                         <span>한국어(KR)</span>
                     </a></li>
-                    <li><a href="#;">
+                    <li class="languageBtn"><a href="#;">
                         ₩ <span>KRW</span>
                     </a></li>
                 </ul>

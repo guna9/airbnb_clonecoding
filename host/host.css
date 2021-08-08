@@ -27,12 +27,17 @@
 .main .leftContent > a:hover {background:#333;}
 .main .rightContent {position:relative;}
 .main .rightContent video {width:100%; height:100%; display:block;}
-.main .rightContent .videoText {position:absolute; left:60px; bottom:48px; display:flex; flex-direction:column;}
-.main .rightContent .videoText button {width:40px; height:40px; border-radius:50%; background:rgba(0, 0, 0, 0.3); color:white; margin-bottom:30px;}
-.main .rightContent .videoText .videoPlay {display:block;}
-.main .rightContent .videoText .videoPause {display:none;}
-.main .rightContent .videoText.videoStop .videoPlay {display:none;}
-.main .rightContent .videoText.videoStop .videoPause {display:block;}
+
+.videoText {position:absolute; left:60px; bottom:48px; display:flex; flex-direction:column;}
+.videoText button {width:40px; height:40px; border-radius:50%; background-color:rgba(0, 0, 0, 0.3); color:white; margin-bottom:30px;}
+.videoText .videoPlay {display:block;}
+.videoText .videoPause {display:none;}
+.videoText.videoStop .videoPlay {display:none;}
+.videoText.videoStop .videoPause {display:block;}
+
+.videoPlay svg {width:24px; height:24px; background:url('data:image/svg+xml;utf8, <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"  focusable="false" style="display: block; fill: white; margin:1px 0 0 2px;"><path d="M27.024 14.273L6.008 2.013c-.461-.268-1-.342-1.517-.206A2 2 0 0 0 3 3.741V28.26a2.002 2.002 0 0 0 3.008 1.728l21.015-12.26a2.003 2.003 0 0 0 .001-3.454z"></path></svg>')no-repeat; background-size:contain;}
+.videoPause svg {width:100%; height:100%; background:url('data:image/svg+xml;utf8, <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"  focusable="false" style="display: block; fill: white; margin:9px 9px 6px 5px;"><path d="M13 1v14H9V1zM7 1v14H3V1z"></path></svg>')no-repeat; background-size:cover;}
+
 
 .main .rightContent .videoText > img {width:50%; margin-bottom:20px;}
 .main .rightContent .videoText span {font-size:1.2rem;}

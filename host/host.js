@@ -1,80 +1,97 @@
-const hostNav = document.querySelector(".hostNav");
-const rightSide = document.querySelector(".rightSide");
+const HOST_NAV = document.querySelector(".hostNav");
+const RIGHT_SIDE = document.querySelector(".rightSide");
 
 function scrollFunc(){
     if(pageYOffset >= 100){
-        hostNav.classList.add("active");
-        rightSide.classList.add("active");
+        HOST_NAV.classList.add("active");
+        RIGHT_SIDE.classList.add("active");
     }else{
-        hostNav.classList.remove("active");
-        rightSide.classList.remove("active");
+        HOST_NAV.classList.remove("active");
+        RIGHT_SIDE.classList.remove("active");
     }
 }
 document.addEventListener('scroll', scrollFunc);
 
-const videoText = document.querySelector(".videoText");
-const videoPlay = videoText.querySelector(".videoPlay");
-const videoPause = videoText.querySelector(".videoPause");
+const VIDEO = document.querySelector(".videoMain");
+const VIDEO_TEXT = document.querySelector(".videoText");
+const VIDEO_PLAY = VIDEO_TEXT.querySelector(".videoPlay");
+const VIDEO_PAUSE = VIDEO_TEXT.querySelector(".videoPause");
 
-videoPlay.addEventListener("click", () => {
-    videoText.classList.add("videoStop");
-});
-videoPause.addEventListener("click", () => {
-    videoText.classList.remove("videoStop");
-});
+/*for(let i = 0; i<VIDEO.length; i++) {
+    VIDEO[i].addEventListener("play", () => {
+       20210809 작성중
+    })
+};*/
 
-const startBtn = document.querySelector(".startBtn");
-const loginModal = document.getElementById("loginModal");
-const modalActiveBg = document.getElementById("modalActiveBg");
+VIDEO.addEventListener("play", () => {
+    VIDEO_TEXT.classList.add("videoStop");
+})
+VIDEO.addEventListener("ended", () => {
+    VIDEO_TEXT.classList.remove("videoStop");
+})
+function playVideo(){
+    VIDEO.play();
+    VIDEO_TEXT.classList.add("videoStop");
+}
+function pauseVideo(){
+    VIDEO.pause();
+    VIDEO_TEXT.classList.remove("videoStop");
+}
 
-startBtn.addEventListener("click", () => {
+
+
+const START_BTN = document.querySelector(".startBtn");
+const LOGIN_MODAL = document.getElementById("loginModal");
+const MODAL_ACTIVE_BG = document.getElementById("modalActiveBg");
+
+START_BTN.addEventListener("click", () => {
     console.log("dd");
-    loginModal.classList.add("active");
-    modalActiveBg.style.zIndex = "4";
-    modalActiveBg.style.display = "block";
+    LOGIN_MODAL.classList.add("active");
+    MODAL_ACTIVE_BG.style.zIndex = "4";
+    MODAL_ACTIVE_BG.style.display = "block";
     document.body.style.overflow = "hidden";
     
-    const closeModalBtn = loginModal.querySelector(".closeBtn");
-    closeModalBtn.addEventListener("click", () => {
-        modalActiveBg.style.zIndex = "3";
-        modalActiveBg.style.display = "none";
-        loginModal.classList.remove("active");
-        //modalActiveBg.classList.remove("active");
+    const CLOSE_MODAL_BTN = LOGIN_MODAL.querySelector(".closeBtn");
+    CLOSE_MODAL_BTN.addEventListener("click", () => {
+        MODAL_ACTIVE_BG.style.zIndex = "3";
+        MODAL_ACTIVE_BG.style.display = "none";
+        LOGIN_MODAL.classList.remove("active");
+        //MODAL_ACTIVE_BG.classList.remove("active");
         document.body.style.overflow = "auto";
     });
 
     window.onclick = function(event){
-        if (event.target == modalActiveBg){
-            modalActiveBg.style.display = "none";
-            loginModal.classList.remove('active');
+        if (event.target == MODAL_ACTIVE_BG){
+            MODAL_ACTIVE_BG.style.display = "none";
+            LOGIN_MODAL.classList.remove('active');
             document.body.style.overflow = "auto";
         }
     };
 });
 //마이페이지-로그인 모달창 오픈
 
-const languageBtn = document.querySelectorAll(".languageBtn");
-const languageModal = document.getElementById("languageModal");
+const LANGUAGE_BTN = document.querySelectorAll(".languageBtn");
+const LANGUAGE_MODAL = document.getElementById("languageModal");
 
-for(var i = 0; i<languageBtn.length; i++) {
-    languageBtn[i].addEventListener("click", () => {
-        languageModal.classList.add('active');
+for(let i = 0; i<LANGUAGE_BTN.length; i++) {
+    LANGUAGE_BTN[i].addEventListener("click", () => {
+        LANGUAGE_MODAL.classList.add('active');
         document.body.style.overflow = "hidden";
-        modalActiveBg.style.zIndex = "4";
-        modalActiveBg.style.display = "block";
+        MODAL_ACTIVE_BG.style.zIndex = "4";
+        MODAL_ACTIVE_BG.style.display = "block";
         
-        const closeModalBtn = languageModal.querySelector(".closeBtn");
-        closeModalBtn.addEventListener("click", () => {
-            modalActiveBg.style.zIndex = "3";
-            modalActiveBg.style.display = "none";
-            languageModal.classList.remove("active");
+        const CLOSE_MODAL_BTN = LANGUAGE_MODAL.querySelector(".closeBtn");
+        CLOSE_MODAL_BTN.addEventListener("click", () => {
+            MODAL_ACTIVE_BG.style.zIndex = "3";
+            MODAL_ACTIVE_BG.style.display = "none";
+            LANGUAGE_MODAL.classList.remove("active");
             document.body.style.overflow = "auto";
         });
         
         window.onclick = function(event){
-            if (event.target == modalActiveBg){
-                modalActiveBg.style.display = "none";
-                languageModal.classList.remove('active');
+            if (event.target == MODAL_ACTIVE_BG){
+                MODAL_ACTIVE_BG.style.display = "none";
+                LANGUAGE_MODAL.classList.remove('active');
                 document.body.style.overflow = "auto";
             }
         };

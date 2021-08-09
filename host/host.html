@@ -261,8 +261,8 @@
                     <source src="./img/host_video_main.mp4" type="video/mp4" />
                 </video>
                 <div class="videoText">
-                    <button class="videoPlay"><svg></svg></button>
-                    <button class="videoPause"><svg></svg></button>
+                    <button class="videoPlay" onclick="playVideo()" type="button"><svg></svg></button>
+                    <button class="videoPause" onclick="pauseVideo()" type="button"><svg></svg></button>
                     <img src="./img/text_clair.png" alt="호스트 이름" />
                     <span>필라델피아의 호스트</span>
                 </div>
@@ -398,12 +398,12 @@
         </section>
         <section class="hostingWithAirbnb">
             <div class="leftContent content">
-                <video class="videoFoot" autoplay crossorigin="anonymous" muted playsinline preload="none" style="object-fit:cover; object-position:center top;">
+                <video class="videoMain" autoplay crossorigin="anonymous" muted playsinline preload="none" style="object-fit:cover; object-position:center top;">
                     <source src="./img/host_video_foot.mp4" type="video/mp4" />
                 </video>
                 <div class="videoText">
-                    <button class="videoPlay"><svg></svg></button>
-                    <button class="videoPause"><svg></svg></button>
+                    <button class="videoPlay" onclick="playVideo()" type="button"><svg></svg></button>
+                    <button class="videoPause" onclick="pauseVideo()" type="button"><svg></svg></button>
                 </div>
             </div>
             <div class="rightContent content">
